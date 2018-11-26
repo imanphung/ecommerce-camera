@@ -4,7 +4,7 @@ $run = mysqli_query($conn,$sql);
 $dong=mysqli_fetch_array($run);
 ?>
 <form name="frmadd" action="modules/quanlysp/xuly.php?id=<?php echo $dong['idsp']?>" method="POST" enctype="multipart/form-data">
-<table width="395" border="1">
+<table width="840" border="1">
     <tr>
         <td colspan="2" align="center">Thêm chi tiết sản phẩm</td>
     </tr>
@@ -18,11 +18,11 @@ $dong=mysqli_fetch_array($run);
     </tr>
     <tr>
         <td>Hình ảnh</td>
-        <td><input type="file" name="hinhanh"><img src="modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>" width="60" height="60"></td>
+        <td><input type="file" name="hinhanh"><img src="modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>" width="60" height="60"><?php echo $dong['hinhanh']?></td>
     </tr>
     <tr>
         <td>Mô tả</td>
-        <td><textarea name="motasp" cols="38" rows="15" ><?php echo $dong['mota']?></textarea></td>
+        <td><textarea name="motasp" cols="100" rows="15" ><?php echo $dong['mota']?></textarea></td>
     </tr>
     <tr>
         <td>Loại sản phẩm</td>
@@ -74,10 +74,8 @@ $dong=mysqli_fetch_array($run);
             ?>
         </select></td>
     </tr>
-    <tr>
-        <td>Thứ tự</td>
-        <td><input type="text" name="thutu" value="<?php echo $dong['thutu']?>"></td>
-    </tr>
+        <td>Ngày tiếp nhận</td>
+        <td><input type="date" name="date" value="<?php echo $dong['ngaytiepnhan']?>"></td>
     <tr>
         <td colspan="2" align="center"><input type="submit" name="sua" id="sua" value="Sửa"></td>
     </tr>

@@ -1,4 +1,4 @@
-<div class="left">
+<div class="center">
     <?php 
         if(isset($_GET['ac'])){
             $tam=$_GET['ac'];
@@ -12,9 +12,6 @@
         if($tam=='sua'){
             include('modules/quanlysp/sua.php');
         }
-    ?>
-</div>
-    <?php
         include('modules/quanlysp/lietke.php');
     ?>
 </div>

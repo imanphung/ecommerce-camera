@@ -16,8 +16,8 @@
         <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>">
         <div class="pname"><?php echo $dong['tensp']?></div>
         <div class="pprice">Giá bán: <?php echo $dong['gia']?></div>
-        <div class="view">Lượt xem: 503</div>
-        <div class="quantity">Số lượng bán: 1000</div>
+        <div class="view">Lượt xem: <?php echo $dong['soluotxem']?></div>
+        <div class="quantity">Số lượng bán: <?php echo $dong['soluongban']?></div>
         <div class="origin">Xuất xứ: <?php echo $dong['xuatsu']?></div>
         <div class="species">Loại: <?php echo $dong['TenloaiSP']?></div>
         <div class="producer">Nhà sản xuất: <?php echo $dong['tennsx']?></div>

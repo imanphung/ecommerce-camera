@@ -9,21 +9,21 @@
     $hinhanh_tmp=$_FILES['hinhanh']['tmp_name'];
     move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
     $motasp=$_POST['motasp'];
-    $idloaisp=$_POST['idloaisp']    ;
+    $idloaisp=$_POST['idloaisp'];
     $xuatsu=$_POST['xuatsu'];
     $idnsx=$_POST['idnsx'];
-    $thutu=$_POST['thutu'];
+    $ngaytiepnhan=$_POST['date'];
     }
     $id=$_GET['id'];
     if(isset($_POST['them'])){
         //thêm
-        $sql="insert into chitetsp (tensp,hinhanh,gia,mota,idloaisp,xuatsu,idnsx,thutu) values('$tensp','$hinhanh','$giasp','$motasp','$idloaisp','$xuatsu','$idnsx','$thutu')";
+        $sql="insert into chitetsp (tensp,hinhanh,gia,mota,idloaisp,xuatsu,idnsx) values('$tensp','$hinhanh','$giasp','$motasp','$idloaisp','$xuatsu','$idnsx')";
         mysqli_query($conn,$sql);
         header('location:../../index.php?quanly=quanlysp&ac=them');
     }
     else if(isset($_POST['sua'])){
         //sửa
-        $sql="update chitetsp set tensp='$tensp',hinhanh='$hinhanh',gia='$giasp',mota='$motasp',idloaisp='$idloaisp',xuatsu='$xuatsu',idnsx='$idnsx',thutu='$thutu' where idsp='$id'";
+        $sql="update chitetsp set tensp='$tensp',hinhanh='$hinhanh',gia='$giasp',mota='$motasp',idloaisp='$idloaisp',xuatsu='$xuatsu',idnsx='$idnsx',ngaytiepnhan='$ngaytiepnhan' where idsp='$id'";
         mysqli_query($conn,$sql);
         header('location:../../index.php?quanly=quanlysp&ac=sua&id='.$id);
     }
