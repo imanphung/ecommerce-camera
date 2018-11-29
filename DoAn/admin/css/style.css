@@ -1,0 +1,85 @@
+/* CSS Document*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: tahoma,Arial, Helvetica, sans-serif;
+    font-size: 15px; 
+    background: rgb(248, 248, 248);
+
+}
+#wrapper{
+    width: 1200px;
+    height: auto;
+    border:1px solid rgb(231, 101, 14);
+    margin: auto;
+    background: #FFF;
+}
+
+#header{
+    width: 100%;
+    height: 350px;
+}
+#header img{
+    width: 100%;
+    height: 300px;
+}
+#header h1{
+    text-align: center;
+    color: rgb(29, 28, 28);
+}
+#menu{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    background: rgb(29, 28, 28);
+}
+#menu ul{
+    list-style: none;
+    width: 100%;
+    height: 40px;
+}
+#menu ul li{
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#menu ul li a:hover{
+    background: rgb(7, 173, 173);   
+}
+#content{
+    width: 100%;
+    min-height: 600px;
+}
+.left{
+    width: 400px;
+    height: auto;
+    float: left;
+}
+.right{
+    width: 790px;
+    height: auto;
+    float: left;
+}
+.center{
+    width: 100%;
+    height: auto;
+}
+.center p{
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    background: rgb(207, 23, 23);
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    color: #FFF;
+}
