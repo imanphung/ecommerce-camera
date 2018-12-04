@@ -7,7 +7,7 @@
         <li>
             <a href="index.php"><img src="images/home.jpg"></a>
         </li>
-        <li><a href="#">DANH MỤC SẢN PHẨM</a>
+        <li><p>Danh mục sản phẩm</p>
             <ul>
             <?php
             while($dong=mysqli_fetch_array($run)){
@@ -18,7 +18,7 @@
             ?>
             </ul>
         </li>
-        <li><a href="#">NHÀ SẢN XUẤT</a>
+        <li><p>Nhà sản xuất</p>
             <ul>
                 <?php
                 include('modules/config.php');

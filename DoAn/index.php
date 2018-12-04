@@ -14,15 +14,18 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
-        <div id="wrapper">
-            <?php
+        <?php
             include('js/js.html');
             include('modules/config.php');
             include('modules/header.php');
             include('modules/menu-top.php');
+        ?>
+        <div id="wrapper">
+            <?php
             include('modules/container.php');
-            include('modules/footer.php');
             ?>    
         </div>
+        <?php
+        include('modules/footer.php');?>
     </body>
     </html>

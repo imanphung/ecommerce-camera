@@ -1,6 +1,14 @@
 <?php
-
-session_start();
+include('../config.php');
+$name=$_POST['fullname'];
+$email=$_POST['email'];
+$phonenumber=$_POST['phonenumber'];
+$sex=$_POST['sex'];
+$pass=$_POST['pass'];
+$day=$_POST['day'];
+$month=$_POST['month'];
+$year=$_POST['year'];
+$date=$year.'-'.$month.'-'.$day;
 try{
 $ip=$_SERVER['REMOTE_ADDR'];
 $response=$_POST['g-recaptcha-response'];
@@ -9,11 +17,12 @@ $json=json_decode($list,true);
 if($json['success'] !=1){
     throw new Exception('Vui lòng kích hoạt captcha');
 }
-$_SESSION['msg']='';
-
-header('location:../../index.php?xem=dangky&check=1');
+$sql="insert into khachhang (tenkh,ngaysinh,email,sdt,gioitinh,matkhau) values('$name','$date','$email','$phonenumber','$sex','$pass')";
+mysqli_query($conn,$sql);
+header('location:../../index.php?xem=quanlytaikhoan');
 }
 catch(Exception $e){
-    $_SESSION['msg']=$e->getMessage();
-    header('location:../../index.php?xem=dangky&check=1');  
-}?>
+    setcookie('eror',$e->getMessage(), time()+ 1, '/');
+    header('location:../../index.php?xem=dangky');   
+}
+?>

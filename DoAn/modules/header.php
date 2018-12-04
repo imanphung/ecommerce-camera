@@ -3,5 +3,4 @@
         <li><a href="index.php?xem=dangky">Đăng ký</a></li>
         <li><a href="index.php?xem=dangnhap">Đăng nhập</a></li>
     </ul></div>
-    <img src="images/banner.jpg">
 </div>

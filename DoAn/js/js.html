@@ -16,7 +16,7 @@
             case 1:
             {
             if(fullname==''){
-            obj.className="boxreg-input-eror";
+            obj.className="mod-input-eror";
             document.getElementById('eror-name').innerHTML = "Bạn không thể bỏ trống chỗ này";
             }
             else{
@@ -39,7 +39,7 @@
             case 1:
             {
             if(phonenumber==''){
-            obj.className="boxreg-input-eror";
+            obj.className="mod-input-eror";
             document.getElementById('eror-phone').innerHTML = "Bạn không thể bỏ trống chỗ này";
             }
             else{
@@ -62,7 +62,7 @@
             case 1:
             {
             if(pass==''){
-            obj.className="boxreg-input-eror";
+            obj.className="mod-input-eror";
             document.getElementById('eror-pass').innerHTML = "Bạn không thể bỏ trống chỗ này";
             }
             else{
@@ -85,7 +85,7 @@
             case 1:
             {
             if(email==''){
-            obj.className="boxreg-input-eror";
+            obj.className="mod-input-eror";
             document.getElementById('eror-email').innerHTML = "Bạn không thể bỏ trống chỗ này";
             }
             else{
@@ -102,7 +102,7 @@
             }
         }
     }
-    function validateForm(obj){
+    function validate_register(obj){
         var fullname= document.getElementById('fullname').value;
         var phonenumber= document.getElementById('phonenumber').value;
         var pass= document.getElementById('pass').value;
@@ -135,6 +135,22 @@
             }
             if(sex==''){
                 obj.sex.className="input-sex-eror";
+            }
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function validate_login(obj){
+        var phone_email= document.getElementById('phonenumber').value;
+        var pass= document.getElementById('pass').value;
+        if(phonenumber=='' || pass==''){
+            if(phone_email==''){
+                Hightlight_phone(obj.phonenumber,1);
+            }
+            if(pass==''){
+                Hightlight_pass(obj.pass,1);
             }
             return false;
         }
