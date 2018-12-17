@@ -2,12 +2,12 @@
     $sql="SELECT * FROM loaisp ORDER BY idSP";   
     $run = mysqli_query($conn,$sql);
 ?>
-<div id="menu-top">
+<nav id="menu-top">
     <ul>
         <li>
             <a href="index.php"><img src="images/home.jpg"></a>
         </li>
-        <li><p>Danh mục sản phẩm</p>
+        <li><a>Danh mục sản phẩm</a>
             <ul>
             <?php
             while($dong=mysqli_fetch_array($run)){
@@ -18,7 +18,7 @@
             ?>
             </ul>
         </li>
-        <li><p>Nhà sản xuất</p>
+        <li><a>Nhà sản xuất</a>
             <ul>
                 <?php
                 include('modules/config.php');
@@ -34,11 +34,11 @@
                 ?>
             </ul>
         </li>
-        <li class="timkiem">
+        <!-- <li class="find">
             <form name="frmFind" action="#" method="GET">
                 Tìm kiếm <input type="text" name="txtFind">  
                 <input type="submit" value="Tìm kiếm">  
             </form>
-        </li>
+        </li> -->
     </ul>
-</div>
+</nav>

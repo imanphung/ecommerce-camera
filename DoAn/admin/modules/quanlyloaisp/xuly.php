@@ -5,7 +5,7 @@
     $id=$_GET['id'];
     if(isset($_POST['them'])){
         //thêm
-        $sql="insert into khachhang (tenkh,ngaysinh,email,sdt,gioitinh,matkhau) values('an','2018-1-1','anphug','0987678909','nam','09876557')";
+        $sql="insert into loaisp (TenloaiSP,Thutu) values('$tenloaisp','$thutu')";
         mysqli_query($conn,$sql);
         header('location:../../index.php?quanly=quanlyloaisp&ac=them');
     }

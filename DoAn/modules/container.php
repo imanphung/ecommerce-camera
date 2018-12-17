@@ -1,3 +1,4 @@
+
 <div id="container">
     <div id="content">
         <?php
@@ -25,9 +26,14 @@
             if($tam=='quanlytaikhoan'){
                 include('modules/content/quanlytaikhoan.php');
             }
+            if($tam=='quanlygiohang'){
+                include('modules/content/quanlygiohang.php');
+            }
             if($tam==''){
+                include('modules/banner.php');
                 include('modules/content/main.php');
             }
-        ?> 
+        ?>
     </div>               
-</div>  
+</div> 
+<script type="text/javascript" src="js/slide.js"></script>

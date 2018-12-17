@@ -1,7 +1,7 @@
 <?php
     $sql="SELECT * FROM loaisp,chitetsp WHERE loaisp.idSP=chitetsp.idloaisp and loaisp.idSP=$_GET[id] ORDER BY loaisp.idSP";
     $run=mysqli_query($conn,$sql);
-
+    $i=0;
 ?>
 <div class="sp">
     <p><a href="#"><?php echo $_GET['tenloaisp']?></a></p>
@@ -11,11 +11,17 @@
     ?>
         <div class="box">
             <a href="index.php?xem=chitietsanpham&id=<?php echo $dong['idsp']?>">
-                <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>">
-                <div class="pname"><?php echo $dong['tensp']?></div>
+                <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
+                <div class="pname" id="<?php echo $i;?>"><?php echo $dong['tensp']?></div>
                 <div class="pprice"><?php echo $dong['gia']?> VNĐ</div>
             </a>
+            <div class="shopping_cart">
+                <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">
+                    <img src="images/shopping_cart.jpg" width="40" height="40">
+                </a>
+            </div>
         </div> 
     <?php
+    $i++;
     }?>
 </div>                      

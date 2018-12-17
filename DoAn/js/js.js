@@ -1,4 +1,4 @@
-<script language="javascript">
+
     function genderChanged(obj)
     {
         var value=obj.value;
@@ -142,6 +142,42 @@
             return true;
         }
     }
+    function validate_info_user(obj){
+        var fullname= document.getElementById('fullname').value;
+        var phonenumber= document.getElementById('phonenumber').value;
+        var email= document.getElementById('email').value;
+        var day = document.getElementById('day').value;
+        var month = document.getElementById('month').value;
+        var year = document.getElementById('year').value;
+        var sex= document.getElementById('sex').value;
+        if(fullname=='' || phonenumber=='' || pass=='' || email==''||day==''||month==''||year==''||sex==''){
+            if(fullname==''){
+                Hightlight_name(obj.fullname,1);
+            }
+            if(phonenumber==''){
+                Hightlight_phone(obj.phonenumber,1);
+            }
+            if(email==''){
+                Hightlight_email(obj.email,1);
+            }
+            if(day==''){
+                obj.day.className="input-birthday-day-eror";
+            }
+            if(month==''){
+                obj.month.className="input-birthday-month-eror";
+            }
+            if(year==''){
+                obj.year.className="input-birthday-year-eror";
+            }
+            if(sex==''){
+                obj.sex.className="input-sex-eror";
+            }
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     function validate_login(obj){
         var phone_email= document.getElementById('phonenumber').value;
         var pass= document.getElementById('pass').value;
@@ -158,4 +194,19 @@
             return true;
         }
     }
-</script>
+    function motionpictures(obj,flag,id){
+        switch(flag){
+            case 1:
+            {
+            obj.className="motionpictures_top";
+            document.getElementById(id).style.color="rgb(14, 144, 184)";
+            break;
+            }
+            case 2:
+            {
+            obj.className="motionpictures_bottom";
+            document.getElementById(id).style.color="#333";
+            break;
+            }
+        }
+    }
