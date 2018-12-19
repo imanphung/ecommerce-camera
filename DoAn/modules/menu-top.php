@@ -2,12 +2,12 @@
     $sql="SELECT * FROM loaisp ORDER BY idSP";   
     $run = mysqli_query($conn,$sql);
 ?>
-<div id="menu-top">
+<nav id="menu-top">
     <ul>
         <li>
             <a href="index.php"><img src="images/home.jpg"></a>
         </li>
-        <li><p>Danh mục sản phẩm</p>
+        <li><a>Danh mục sản phẩm</a>
             <ul>
             <?php
             while($dong=mysqli_fetch_array($run)){
@@ -18,7 +18,7 @@
             ?>
             </ul>
         </li>
-        <li><p>Nhà sản xuất</p>
+        <li><a>Nhà sản xuất</a>
             <ul>
                 <?php
                 include('modules/config.php');
@@ -34,11 +34,27 @@
                 ?>
             </ul>
         </li>
-        <li class="timkiem">
-            <form name="frmFind" action="#" method="GET">
-                Tìm kiếm <input type="text" name="txtFind">  
-                <input type="submit" value="Tìm kiếm">  
+        </ul>
+            <div class="search">
+            <form name="frmsearch" action="#" method="GET">
+                <input name="txtsearch" placeholder="Tìm sản phẩm, nhà sản xuất" class="search-text">
+                <input type="submit" value="Tìm kiếm" class="search-btn">  
             </form>
-        </li>
-    </ul>
-</div>
+            </div>
+        <div class="cart">
+            <span class="cart-num">
+            <?php 
+            $tong=0;
+            if(isset($_SESSION['giohang'])){
+                $count=count($_SESSION['giohang']);
+                for($i=0;$i<$count;$i++){
+                    $tong+= $_SESSION['giohang'][$i]["soluong"];
+                }
+            }
+            echo $tong;
+            ?></span>
+            <a href="index.php?xem=quanlygiohang">
+                <img src="images/cart.jpg" width="35" height="35">
+            </a>
+        </div>
+</nav>

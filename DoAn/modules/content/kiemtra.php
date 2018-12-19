@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../config.php');
 $name=$_POST['fullname'];
 $email=$_POST['email'];
@@ -19,6 +20,8 @@ if($json['success'] !=1){
 }
 $sql="insert into khachhang (tenkh,ngaysinh,email,sdt,gioitinh,matkhau) values('$name','$date','$email','$phonenumber','$sex','$pass')";
 mysqli_query($conn,$sql);
+$_SESSION['user'] = $phonenumber;
+$_SESSION['pass'] = $pass;
 header('location:../../index.php?xem=quanlytaikhoan');
 }
 catch(Exception $e){

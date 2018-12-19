@@ -1,3 +1,8 @@
+<?php
+if(isset($_SESSION['user'])){
+    header('location:index.php?xem=quanlytaikhoan');
+}
+?>
 <div class="boxlogin">
 <div class="boxlog">
 <form action="modules/content/xuly.php" method="POST" name="login" autocomplete="off" onsubmit="return validate_login(this)" enctype="multipart/form-data">

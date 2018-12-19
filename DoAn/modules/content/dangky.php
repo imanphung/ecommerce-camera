@@ -1,3 +1,8 @@
+<?php
+if(isset($_SESSION['user'])){
+    header('location:index.php?xem=quanlytaikhoan');
+}
+?>
 <div class="boxregister">
 <div class="boxreg">
 <form action="modules/content/kiemtra.php" method="POST" name="register" autocomplete="off" onsubmit="return validate_register(this)" enctype="multipart/form-data">
@@ -49,7 +54,7 @@
                         $i=$date['year'];
                         ?>
                         <?php
-                        while($i>=1990){
+                        while($i>=1900){
                         ?>
                         <option value="<?php echo $i;?>"><?php echo $i;?></option>
                         <?php

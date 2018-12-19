@@ -11,7 +11,7 @@
     $run_cungnsx=mysqli_query($conn,$sql_cungnsx);
 ?>
 <div class="sp">
-    <p>Chi tiết sản phẩm</p>
+    <p><a href="#">Chi tiết sản phẩm</a></p>
     <div class="boxctsp">
         <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>">
         <div class="pname"><?php echo $dong['tensp']?></div>
@@ -25,7 +25,7 @@
     </div>
 </div>
 <div class="sp">
-    <p>Sản phẩm cùng loại</p>
+    <p><a href="#">Sản phẩm cùng loại</a></p>
     <?php
     $i=1;
     ?>
@@ -33,20 +33,25 @@
     while(($dong_cungloai=mysqli_fetch_array($run_cungloai))&$i<=5){
     ?>
     <div class="box">
-    <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungloai['idsp']?>">
-        <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungloai['hinhanh']?>">
-        <div class="pname"><?php echo $dong_cungloai['tensp']?></div>
-        <div class="pprice"><?php echo $dong_cungloai['gia']?>đ</div>
-        <div class="action">
+        <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungloai['idsp']?>">
+            <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungloai['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
+            <div class="pname" id="<?php echo $i;?>"><?php echo $dong_cungloai['tensp']?></div>
+            <div class="pprice"><?php echo $dong_cungloai['gia']?>đ</div>
+            <div class="action">
+            </div>
+        </a>
+        <div class="shopping_cart">
+        <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">
+            <img src="images/shopping_cart.jpg" width="40" height="40">
+        </a>
         </div>
-    </a>
     </div>
     <?php
     $i++;
     }?>
 </div>
 <div class="sp">
-    <p>Sản phẩm cùng nhà sản xuất</p>
+    <p><a href="#">Sản phẩm cùng nhà sản xuất</a></p>
     <?php
     $i=5;
     ?>
@@ -54,13 +59,18 @@
     while(($dong_cungnsx=mysqli_fetch_array($run_cungnsx))&$i<10){
     ?>
     <div class="box">
-    <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungnsx['idsp']?>">
-        <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungnsx['hinhanh']?>">
-        <div class="pname"><?php echo $dong_cungnsx['tensp']?></div>
-        <div class="pprice"><?php echo $dong_cungnsx['gia']?>đ</div>
-        <div class="action">
+        <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungnsx['idsp']?>">
+            <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungnsx['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
+            <div class="pname" id="<?php echo $i;?>"><?php echo $dong_cungnsx['tensp']?></div>
+            <div class="pprice"><?php echo $dong_cungnsx['gia']?>đ</div>
+            <div class="action">
+            </div>
+        </a>
+        <div class="shopping_cart">
+        <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">
+            <img src="images/shopping_cart.jpg" width="40" height="40">
+        </a>
         </div>
-    </a>
     </div>
     <?php
     $i++;

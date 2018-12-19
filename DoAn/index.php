@@ -3,7 +3,9 @@
         Name: Phùng Thanh An
         Create Date-Time: 5/11/2018 -- 21:10
     -->
-    <?php session_start();
+    <?php
+    ob_start();
+    session_start();
     ?>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Tansitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,10 +14,23 @@
         <title>Camere máy ảnh chuyên nghiệp</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <script>
+            // tạo menu cố định
+        $(document).ready(function() {
+            var div = $('#menu-top');
+            var start = $(div).offset().top;
+            $.event.add(window, "scroll", function() {
+                var p = $(window).scrollTop();
+                $(div).css('position',((p)>start) ? 'fixed' : 'static');
+                $(div).css('top',((p)>start) ? '0px' : '');
+            });
+        });
+        </script>
     </head>
     <body>
         <?php
-            include('js/js.html');
             include('modules/config.php');
             include('modules/header.php');
             include('modules/menu-top.php');
