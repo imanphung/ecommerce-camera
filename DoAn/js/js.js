@@ -209,7 +209,10 @@
             break;
             }
         }
+<<<<<<< HEAD:DoAn/js/js.js
     }
     function Subnumber(){
         document.getElementById('order-number').value="3";
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6:DoAn/js/js.js
     }

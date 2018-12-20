@@ -57,7 +57,11 @@ body{
     height: auto;
     display: none;
     position: absolute;
+<<<<<<< HEAD
     border: 1px solid rgb(243, 184, 57);
+=======
+    border: 1px solid rgb(243, 125, 57);
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     border-top: 0px;
     border-radius: 2px;
 }
@@ -87,6 +91,7 @@ body{
 #menu-top{
     background: linear-gradient(90deg,rgb(18, 36, 44) 50%,rgb(27, 91, 121) 87%,rgb(17, 140, 192) 100%);
     width: 100%;
+<<<<<<< HEAD
     height: 45px;
     float: left;
 }
@@ -99,6 +104,22 @@ body{
 #menu-top ul li{
     float: left;
     line-height: 45px;
+=======
+    height: 40px;
+    float: left; 
+
+
+}
+#menu-top ul{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu-top ul li{
+    float: left;
+    line-height: 40px;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     position: relative; 
 }
 #menu-top ul li:hover ul{
@@ -132,7 +153,11 @@ body{
 }
 #menu-top ul li>ul{
     width: 99.5%;
+<<<<<<< HEAD
     height: 45px;
+=======
+    height: 40px;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     display: none;
     position: absolute;
 }
@@ -153,6 +178,7 @@ body{
     background: #fff;
     color: #1a9Cb7;
 }
+<<<<<<< HEAD
 .search{
     float: left;
     margin-left: 230px;
@@ -205,6 +231,15 @@ body{
     height: auto;
     border-top: 20px solid rgb(241, 241, 241);
 }
+=======
+
+/* banner >>*/
+.banner-wrap{
+    width: 100%;
+    height: auto;
+    border-top: 20px solid rgb(241, 241, 241);
+}
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 .slide{
     width: 600px;
     float: left;
@@ -212,7 +247,11 @@ body{
 }
 .move-slide{
     width: 9000px;
+<<<<<<< HEAD
     transition: 0.7s;
+=======
+    transition: 0.5s;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 
 }
 .move-slide img{
@@ -697,17 +736,28 @@ body{
     margin-top: 25px;
 }
 .member-info{
+<<<<<<< HEAD
     color: #ff5100;
+=======
+    color: #fc5d13;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 }
 
 /* Giỏ hàng */
 .cart-wrap{
     width: 68%;
+<<<<<<< HEAD
+=======
+    height: 500px;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     margin-top: 30px;
     color: #333;
     font-size: 14px;
     float: left;
+<<<<<<< HEAD
     height: 100%;
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 }
 .cart-title{
     width: 68%;
@@ -715,7 +765,11 @@ body{
     height: 50px;
 }
 .cart-title h2{
+<<<<<<< HEAD
     color: #505050;
+=======
+    color: #333;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     font-size: 16px;
     margin-left: 10px;
     font-family: 'Roboto Condensed',Arial,sans-serif;
@@ -729,6 +783,7 @@ body{
     padding-top: 2px;
     margin-left: 7px
 }
+<<<<<<< HEAD
 .cart-wrap.cart-content{
     width: 100%;
     float: left;
@@ -740,6 +795,19 @@ body{
     float: left;
     border: 10px solid rgb(241, 241, 241);
     border-right: 0;
+=======
+.cart-content{
+    width: 100%;
+    float: left;
+    height: 130px;
+     
+}
+.cart-info{
+    width: 31.8%;
+    float: left;
+    border: 1px solid rgb(192, 192, 192);
+    height: 200px;   
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 }
 .cart-content-left{
     width: 72%;
@@ -785,6 +853,7 @@ body{
     float: left;
     margin-right: 15px;
 }
+<<<<<<< HEAD
 .field-content-col a{
     color: #989898;
     text-decoration: none;
@@ -792,6 +861,8 @@ body{
 .field-content-col a:hover{
     color: #b11212;
 }
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 .field-content-col .field-name {
     margin-bottom: 10px;
 }
@@ -809,7 +880,10 @@ body{
 .field-price-col .price{
     font-size: 15px;
     font-weight: 700;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 }
 .field-qty-col {
     width: 100px;
@@ -818,6 +892,10 @@ body{
 .field-qty-col .qty{
     width: 70px;
     height: 24px;
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     border: 1px solid #ddd;
     display: block;
     zoom: 1;
@@ -835,6 +913,11 @@ body{
     float: left;
     font-family: 'Roboto Condensed',Arial,sans-serif;
     font-size: 14px;
+<<<<<<< HEAD
+=======
+    outline: 0;
+    box-shadow: none;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 }
 .qty input{
         width: 28px;
@@ -859,6 +942,10 @@ body{
 }
 .shipping-info{
     margin-bottom: 25px;
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
     padding-left: 33px;
 }
 .shipping-info p{
@@ -873,6 +960,7 @@ body{
     margin-top: 4px;
     font-size: 12px;
 }
+<<<<<<< HEAD
 .cart-info ul{
     list-style: none;
     margin-left: 13px;  
@@ -932,3 +1020,5 @@ body{
     background-color: rgb(37, 167, 167);
     color: #FFF;
 }
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6

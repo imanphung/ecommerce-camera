@@ -2,6 +2,7 @@
     $sql="SELECT * FROM loaisp,chitetsp WHERE loaisp.idSP=chitetsp.idloaisp and loaisp.idSP=$_GET[id] ORDER BY loaisp.idSP";
     $run=mysqli_query($conn,$sql);
     $i=0;
+<<<<<<< HEAD
     if(isset($_GET['them'])){
         $idsp=$_GET['them'];
         if(isset($_SESSION['giohang']) && is_array($_SESSION['giohang'])){
@@ -29,6 +30,8 @@
         }
         header('location:index.php?xem=cacloaisanpham&id='.$_GET['id'].'&tenloaisp='.$_GET['tenloaisp']);
     }
+=======
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 ?>
 <div class="sp">
     <p><a href="#"><?php echo $_GET['tenloaisp'];?></a></p>
@@ -43,7 +46,11 @@
                 <div class="pprice"><?php echo $dong['gia']?> VNĐ</div>
             </a>
             <div class="shopping_cart">
+<<<<<<< HEAD
                 <a href="index.php?xem=cacloaisanpham&them=<?php echo $dong['idsp']?>&id=<?php echo $_GET['id']?>&tenloaisp=<?php echo $_GET['tenloaisp'];?>">
+=======
+                <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
                     <img src="images/shopping_cart.jpg" width="40" height="40">
                 </a>
             </div>

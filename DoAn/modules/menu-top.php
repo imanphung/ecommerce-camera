@@ -34,6 +34,7 @@
                 ?>
             </ul>
         </li>
+<<<<<<< HEAD
         </ul>
             <div class="search">
             <form name="frmsearch" action="#" method="GET">
@@ -57,4 +58,13 @@
                 <img src="images/cart.jpg" width="35" height="35">
             </a>
         </div>
+=======
+        <!-- <li class="find">
+            <form name="frmFind" action="#" method="GET">
+                Tìm kiếm <input type="text" name="txtFind">  
+                <input type="submit" value="Tìm kiếm">  
+            </form>
+        </li> -->
+    </ul>
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 </nav>

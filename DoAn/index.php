@@ -21,6 +21,10 @@
         $(document).ready(function() {
             var div = $('#menu-top');
             var start = $(div).offset().top;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
             $.event.add(window, "scroll", function() {
                 var p = $(window).scrollTop();
                 $(div).css('position',((p)>start) ? 'fixed' : 'static');
