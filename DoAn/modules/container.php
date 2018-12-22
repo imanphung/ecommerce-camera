@@ -1,5 +1,5 @@
 
-<div id="container">
+<div id="control">
     <div id="content">
         <?php
             if(isset($_GET['xem'])){
@@ -28,6 +28,9 @@
             }
             if($tam=='quanlygiohang'){
                 include('modules/content/quanlygiohang.php');
+            }
+            if($tam=='thongtingiaohang'){
+                include('modules/content/thongtingiaohang.php');
             }
             if($tam==''){
                 include('modules/banner.php');

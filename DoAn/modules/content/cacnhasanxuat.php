@@ -13,7 +13,7 @@
             <a href="index.php?xem=chitietsanpham&id=<?php echo $dong['idsp']?>">
                 <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
                 <div class="pname" id="<?php echo $i;?>"><?php echo $dong['tensp']?></div>
-                <div class="pprice"><?php echo $dong['gia']?> VNĐ</div>
+                <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
             </a>
             <div class="shopping_cart">
                 <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">

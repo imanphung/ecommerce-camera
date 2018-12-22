@@ -209,10 +209,15 @@
             break;
             }
         }
-<<<<<<< HEAD:DoAn/js/js.js
     }
-    function Subnumber(){
-        document.getElementById('order-number').value="3";
-=======
->>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6:DoAn/js/js.js
+    function Redirect_sub(obj) {
+        var id = obj;
+        window.location="index.php?xem=quanlygiohang&giamsoluong="+id;
+    }
+    function Redirect_add(obj) {
+        var id = obj;
+        window.location="index.php?xem=quanlygiohang&themsoluong="+id;
+    }
+    function btnsubmit(){
+        window.location="index.php?xem=thongtingiaohang";
     }

@@ -14,7 +14,7 @@ if(isset($_SESSION['user'])){
         </div>
         <div class="mod-input">
             <p>Mật khẩu <label class="label">*</label></p>
-            <input type="text" name="pass" id="pass" value="<?php if(isset($_COOKIE['pass'])) echo $_COOKIE['pass'];?>" placeholder="Vui lòng nhập mật khẩu của bạn" class="normal" onblur="Hightlight_pass(this,1)" onclick ="Hightlight_pass(this,2)">
+            <input type="password" name="pass" id="pass" value="<?php if(isset($_COOKIE['pass'])) echo $_COOKIE['pass'];?>" placeholder="Vui lòng nhập mật khẩu của bạn" class="normal" onblur="Hightlight_pass(this,1)" onclick ="Hightlight_pass(this,2)">
             <span id="eror-pass"></span>
             <span><?php if(isset($_COOKIE['eror'])) echo $_COOKIE['eror'];?></span>
         </div>

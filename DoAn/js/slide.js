@@ -17,11 +17,7 @@ function Back(){
 }	
 var interval_obj = setInterval(function(){
 	Next();
-<<<<<<< HEAD
 },5000)
-=======
-},4000)
->>>>>>> 7e212fcdee06c98f415d70808d723581af5d15e6
 function moved_show(){
     document.getElementsByClassName("next")[0].style.display="block";
     document.getElementsByClassName("prev")[0].style.display="block";
