@@ -5,7 +5,7 @@ if(isset($_SESSION['user'])){
 ?>
 <div class="boxlogin">
 <div class="boxlog">
-<form action="modules/content/xuly.php" method="POST" name="login" autocomplete="off" onsubmit="return validate_login(this)" enctype="multipart/form-data">
+<form action="modules/content/xulydangnhap.php" method="POST" name="login" autocomplete="off" onsubmit="return validate_login(this)" enctype="multipart/form-data">
     <div class="boxlog-l">
         <div class="mod-input">
             <p>Số điện thoại hoặc email <label class="label">*</label></p>

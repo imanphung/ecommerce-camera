@@ -66,7 +66,7 @@ $count=count($_SESSION['giohang']);
         header('location:index.php?xem=quanlygiohang');
     }
     ?>
-
+<form action="modules/content/xuly.php" method="POST" name="cart" enctype="multipart/form-data">
     <div class="cart-wrap">
                 <div class="cart-title">
                     <h2>Giỏ hàng của bạn</h2>
@@ -114,8 +114,8 @@ $count=count($_SESSION['giohang']);
                             <div class="field-qty-col">
                                 <div class="qty">
                                     <button type="button" onclick="Redirect_sub(<?php echo $dong['idsp']?>);" >-</button>
-                                    <input type="text" name="order-number" id="order-number" value="<?php echo $_SESSION['giohang'][$i]["soluong"]?>">                     
-                                    <button  onclick="Redirect_add(<?php echo $dong['idsp']?>);">+</button>
+                                    <input type="text" readonly="readonly" name="order-number" id="order-number" value="<?php echo $_SESSION['giohang'][$i]["soluong"]?>">                     
+                                    <button type="button" onclick="Redirect_add(<?php echo $dong['idsp']?>);">+</button>
                                 </div>
                                 <div class="field-status-col">
                                     <span>Còn <?php echo $dong['soluongban']?> sản phẩm</span>
@@ -166,10 +166,11 @@ $count=count($_SESSION['giohang']);
                         
                     </li>
                     <li>
-                    <button type="button" class="btn-con-cart" onclick="btnsubmit();">XÁC NHẬN GIỎ HÀNG</button>
+                    <button type="submit" class="btn-con-cart" name="btncart" id="btncart">XÁC NHẬN GIỎ HÀNG</button>
                     </li>
                 </ul>
     </div>
+</form>
 <?php
 }
 ?>

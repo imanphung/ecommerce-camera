@@ -32,6 +32,9 @@
             if($tam=='thongtingiaohang'){
                 include('modules/content/thongtingiaohang.php');
             }
+            if($tam=='donhangcuatoi'){
+                include('modules/content/donhangcuatoi.php');
+            }
             if($tam==''){
                 include('modules/banner.php');
                 include('modules/content/main.php');

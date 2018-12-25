@@ -5,10 +5,11 @@ if(isset($_SESSION['user'])==false){
 ?>
 <?php
 $tong=0;
+$tongtien=0;
 $ship =20000;
 $count=count($_SESSION['giohang']);
 if(isset($_SESSION['giohang'])){?>
-<form action="modules/content/kiemtra.php" method="POST" name="register" autocomplete="off" onsubmit="return validate_register(this)" enctype="multipart/form-data">
+<form action="modules/content/xuly.php" method="POST" name="shipment" autocomplete="off" onsubmit="return validate_shipment(this)" enctype="multipart/form-data">
     <div class="shipment-wrap">
             <div class="shipment-title">
                 <h2>Thông tin giao hàng</h2>
@@ -82,15 +83,16 @@ if(isset($_SESSION['giohang'])){?>
                             <p>Tổng cộng</p>
                         </div>
                         <div class="oder-info-right">   
-                        <div class="total-price"><?php
+                        <div class="total-price">
+                        <?php
                         $tongtien=$tong + $ship;
-                        echo number_format($tongtien, 0, ',', '.').'₫';
-                        ?></div>
+                        ?>
+                        <input class="total" readonly="readonly" type="text" name="tongtien" value="<?php echo $tongtien;?>"><?php echo number_format($tongtien, 0, ',', '.').'₫';?>
                         </div>
-                        
+                        </div>                      
                     </li>
                     <li>
-                    <button type="submit" class="btn-con-cart">THANH TOÁN</button>
+                    <button type="submit" class="btn-con-cart" name="btnshipment">THANH TOÁN</button>
                     </li>
                 </ul>
     </div>
@@ -188,8 +190,42 @@ if(isset($_SESSION['giohang'])){?>
             }
         }
     }
+    function validate_shipment(obj){
+        var fullname= document.getElementById('fullname').value;
+        var phonenumber= document.getElementById('phonenumber').value;
+        var street= document.getElementById('street').value;
+        var ward= document.getElementById('ward').value;
+        var county = document.getElementById('county').value;
+        var province = document.getElementById('province').value;
+
+        if(fullname=='' || phonenumber=='' || street=='' || ward==''||county==''||province==''){
+            if(fullname==''){
+                Hightlight_name(obj.fullname,1);
+            }
+            if(phonenumber==''){
+                Hightlight_phone(obj.phonenumber,1);
+            }
+            if(street==''){
+                Hightlight_street(obj.street,1);
+            }
+            if(ward==''){
+                Hightlight_ward(obj.ward,1);
+            }
+            if(county==''){
+                Hightlight_county(obj.county,1);
+            }
+            if(province==''){
+                Hightlight_province(obj.province,1);
+            }
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 </script>
 <?php
 }
 ?>
+
 

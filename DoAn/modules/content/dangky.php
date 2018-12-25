@@ -5,7 +5,7 @@ if(isset($_SESSION['user'])){
 ?>
 <div class="boxregister">
 <div class="boxreg">
-<form action="modules/content/kiemtra.php" method="POST" name="register" autocomplete="off" onsubmit="return validate_register(this)" enctype="multipart/form-data">
+<form action="modules/content/kiemtradangky.php" method="POST" name="register" autocomplete="off" onsubmit="return validate_register(this)" enctype="multipart/form-data">
     <div class="boxreg-l">
         <div class="mod-input">
             <p>Họ tên <label class="label">*</label></p>

@@ -1,25 +1,56 @@
 <?php
-session_start();
 include('../config.php');
-$phone_email=$_POST['phone_email'];
-$pass=$_POST['pass'];
-$sql = "SELECT * FROM khachhang WHERE (email = '$phone_email' or sdt = '$phone_email') and matkhau = '$pass'";  
-$run = mysqli_query($conn,$sql);
-if($run){
-    $row=mysqli_fetch_array($run);
-    if( $row != 0){
-        $_SESSION['user'] = $row['sdt'];
-        $_SESSION['pass'] = $row['pass'];
-        header("location:../../index.php?xem=quanlytaikhoan");
-    }
-    else{
-        setcookie('user',$phone_email, time()+ 1, '/');
-        setcookie('pass',$pass, time()+ 1, '/');
-        setcookie('eror','Tên đăng nhập hoặc mật khẩu không chính xác', time()+ 1, '/');
-        header("location:../../index.php?xem=dangnhap");
-    }
+session_start();    
+if(isset($_POST['btncart'])){
+    $_SESSION['loaigiaohang']=$_POST['ship'];
+    header('location:../../index.php?xem=thongtingiaohang');
 }
-else{
-    echo "lỗi";
+if(isset($_POST['btnshipment'])){
+            //thêm địa chỉ nhận hàng 
+            $user=$_SESSION['user'];
+            $sql="SELECT idkh FROM khachhang WHERE sdt=$user or email=$user"; //lấy id của khách hàng
+            $run = mysqli_query($conn,$sql);
+            if($run){
+                $dong=mysqli_fetch_array($run);
+                $nguoidungid=$dong['idkh'];
+                $tennguoinhan=$_POST['fullname'];
+                $sdt=$_POST['phonenumber'];
+                $street=$_POST['street'];
+                $ward=$_POST['ward'];
+                $county=$_POST['county'];
+                $province=$_POST['province'];
+                $diachigiaohang=$street.'-'.$ward.'-'.$county.'-'.$province;
+                $sql="insert into diachinhanhang (nguoidungid,tennguoinhan,sdt,diachigiaohang) values('$nguoidungid','$tennguoinhan','$sdt','$diachigiaohang')";
+                mysqli_query($conn,$sql);
+                //thêm thông tin đặt hàng
+                $tongtien=$_POST['tongtien'];
+                $loaigiaohang=$_SESSION['loaigiaohang'];
+                $tinhtrang=0;
+                $ngaytao=date('Y-m-d');
+                $ngaydukiengiaohang=date( "Y-m-d", strtotime( "$ngaytao +3 day" ) );    
+                $sql="SELECT id FROM diachinhanhang WHERE nguoidungid=$nguoidungid"; //lấy iddiachinhanhang
+                $run = mysqli_query($conn,$sql);
+                if($run){
+                    $dong=mysqli_fetch_array($run);
+                    $diachinhanhangid=$dong['id'];
+                    $sql="insert into dathang (userid,tonggia,loaigiaohang,tinhtrang,ngaytao,ngaydukiengiaohang,diachinhanhangid) values('$nguoidungid','$tongtien','$loaigiaohang','$tinhtrang','$ngaytao','$ngaydukiengiaohang','$diachinhanhangid')";
+                    mysqli_query($conn,$sql);
+                }
+                //Thêm thông tin chi tiết đặt hàng 
+                $sql="SELECT id FROM dathang WHERE userid=$nguoidungid"; //lấy iddathang
+                $run = mysqli_query($conn,$sql);
+                if($run){
+                    $dong=mysqli_fetch_array($run);
+                    $dathangid=$dong['id'];
+                    for ($i=0; $i <count($_SESSION['giohang']); $i++) {
+                        $idsp=$_SESSION['giohang'][$i]["idsp"];
+                        $soluong=$_SESSION['giohang'][$i]["soluong"];
+                        $gia=$_SESSION['giohang'][$i]["gia"];
+                        $sql="insert into chitietdathang (dathangid,idsp,soluong,gia,tinhtrang,ngaydukiengiaohang) values('$dathangid','$idsp','$soluong','$gia','$tinhtrang','$ngaydukiengiaohang')";
+                        mysqli_query($conn,$sql);
+                    }
+                }
+            }
+            header('location:../../index.php?xem=quanlytaikhoan&chon=thongtindonhang');  
 }
 ?>

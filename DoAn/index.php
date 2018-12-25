@@ -12,9 +12,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Camere máy ảnh chuyên nghiệp</title>
+        <link rel="stylesheet" href="template/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="template/bootstrap/js/bootstrap.min.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="js/js.js"></script>

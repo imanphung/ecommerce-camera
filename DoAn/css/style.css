@@ -1,16 +1,17 @@
 /* CSS Document*/
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-body{
-    font-family:Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
-    font-size: 15px; 
-    background: rgb(241, 241, 241);
-    width: 100%;
 
+body {
+    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
+    font-size: 15px;
+    width: 100%;
 }
-#wrapper{
+
+#wrapper {
     width: 100%;
     height: auto;
     float: left;
@@ -18,40 +19,47 @@ body{
     border-right: 75px solid rgb(241, 241, 241);
 }
 
-#header{
+#header {
     width: 100%;
     height: 25px;
     float: left;
 }
-.account{
+
+.account {
     width: 100%;
     height: 25px;
-    float: left; 
+    float: left;
 }
-.account ul{
+
+.account ul {
     width: 100%;
     height: 25px;
     list-style: none;
-    background: linear-gradient(90deg,rgb(18, 36, 44) 50%,rgb(27, 91, 121) 87%,rgb(18, 36, 44) 100%);
+    background: linear-gradient(90deg, rgb(18, 36, 44) 50%, rgb(27, 91, 121) 87%, rgb(18, 36, 44) 100%);
 }
-.account ul li{
+
+.account ul li {
     float: right;
     padding-right: 15px;
-    position: relative; 
+    position: relative;
     line-height: 24px;
 }
-.account ul li a{
+
+.account ul li a {
     font-size: 12px;
     text-decoration: none;
-    color: #ccdedf; 
+    color: #ccdedf;
 }
-.account ul li a:hover{
+
+.account ul li a:hover {
     color: #ffffff;
 }
-.account ul li:hover ul{
+
+.account ul li:hover ul {
     display: block;
 }
-.account ul li>ul{
+
+.account ul li>ul {
     width: 88%;
     height: auto;
     display: none;
@@ -62,12 +70,13 @@ body{
     background: rgb(253, 253, 253);
 }
 
-.account ul li>ul li{
+.account ul li>ul li {
     float: left;
     width: 100%;
-    border-left: 0px;  
+    border-left: 0px;
 }
-.account ul li>ul li a{
+
+.account ul li>ul li a {
     text-align: center;
     width: 100%;
     color: rgb(49, 49, 49);
@@ -76,42 +85,48 @@ body{
     margin-left: 5px;
 }
 
-.account ul li ul li a:hover{
+.account ul li ul li a:hover {
     color: rgb(15, 169, 180);
 }
-.menu-bottom{
+
+.menu-bottom {
     width: 100%;
     height: 15px;
-    background: linear-gradient(90deg,rgb(18, 36, 44) 50%,rgb(27, 91, 121) 87%,rgb(17, 140, 192) 100%);
+    background: linear-gradient(90deg, rgb(18, 36, 44) 50%, rgb(27, 91, 121) 87%, rgb(17, 140, 192) 100%);
     line-height: 25px;
 }
-#menu-top{
-    background: linear-gradient(90deg,rgb(18, 36, 44) 50%,rgb(27, 91, 121) 87%,rgb(17, 140, 192) 100%);
+
+#menu-top {
+    background: linear-gradient(90deg, rgb(18, 36, 44) 50%, rgb(27, 91, 121) 87%, rgb(17, 140, 192) 100%);
     width: 100%;
     height: 45px;
     float: left;
 }
-#menu-top ul{
+
+#menu-top ul {
     list-style: none;
     margin: 0;
     padding: 0;
     float: left;
 }
-#menu-top ul li{
+
+#menu-top ul li {
     float: left;
     line-height: 45px;
-    position: relative; 
+    position: relative;
 }
-#menu-top ul li:hover ul{
+
+#menu-top ul li:hover ul {
     display: block;
 }
 
-#menu-top ul li a{
+#menu-top ul li a {
     padding-right: 30px;
     padding-left: 30px;
     white-space: nowrap;
 }
-#menu-top ul>li>a{
+
+#menu-top ul>li>a {
     text-decoration: none;
     color: rgb(216, 229, 240);
     display: inline-block;
@@ -119,30 +134,35 @@ body{
     padding-left: 30px;
     white-space: nowrap;
 }
-#menu-top ul li a img{
+
+#menu-top ul li a img {
     width: 30px;
-    height: 31px;
+    height: 33px;
     padding-left: 5px;
     margin-top: 7px;
     display: block;
     padding-bottom: 7px;
 }
-#menu-top ul li a:hover{
+
+#menu-top ul li a:hover {
     background: #fff;
-    color:#757575;
+    color: #757575;
 }
-#menu-top ul li>ul{
+
+#menu-top ul li>ul {
     width: 99.5%;
     height: 45px;
     display: none;
     position: absolute;
 }
-#menu-top ul li>ul li{
+
+#menu-top ul li>ul li {
     width: 100%;
     border: 1px solid #ebebeb;
     margin-top: -1px;
 }
-#menu-top ul li ul li a{
+
+#menu-top ul li ul li a {
     text-decoration: none;
     display: block;
     background: #fff;
@@ -150,15 +170,18 @@ body{
     line-height: 40px;
     color: #757575;
 }
-#menu-top ul li ul li a:hover{
+
+#menu-top ul li ul li a:hover {
     background: #fff;
     color: #1a9Cb7;
 }
-.search{
+
+.search {
     float: left;
-    margin-left: 230px;
+    margin-left: 210px;
 }
-.search-text{
+
+.search-text {
     width: 350px;
     height: 35px;
     border: 1px solid #FFF;
@@ -167,26 +190,31 @@ body{
     outline: 0;
     box-shadow: none;
     margin-top: 4px;
-} 
-.search-btn{
+    font-size: 14px;
+}
+
+.search-btn {
     width: 80px;
     height: 37px;
     background-color: rgb(37, 167, 167);
     border: 1px solid rgb(37, 167, 167);
-    border-radius:2px; 
-    color: #fff; 
+    border-radius: 2px;
+    color: #fff;
     outline: 0;
     box-shadow: none;
     margin-top: 4px;
+    font-size: 14px;
 }
-.cart{
+
+.cart {
     float: left;
     width: 40px;
     margin-left: 40px;
-    margin-top:5px;
+    margin-top: 5px;
     position: relative;
 }
-.cart-num{
+
+.cart-num {
     position: absolute;
     background: #f36e36;
     color: #fff;
@@ -200,35 +228,42 @@ body{
     line-height: 14px;
     border-radius: 50%;
 }
+
+
 /* banner >>*/
-.banner-wrap{
+
+.banner-wrap {
     width: 100%;
     height: auto;
     border-top: 20px solid rgb(241, 241, 241);
 }
-.slide{
+
+.slide {
     width: 600px;
     float: left;
     overflow: hidden;
 }
-.move-slide{
+
+.move-slide {
     width: 9000px;
     transition: 0.7s;
-
 }
-.move-slide img{
+
+.move-slide img {
     width: 600px;
     height: 225px;
-    float:left;
+    float: left;
 }
-.control{
+
+.control {
     position: absolute;
     color: white;
     font-size: 40px;
     margin-top: 100px;
     padding-left: 20px;
 }
-.next{
+
+.next {
     width: 30px;
     height: 30px;
     position: relative;
@@ -236,22 +271,28 @@ body{
     display: none;
     margin-top: -28px;
 }
-.prev{
+
+.prev {
     width: 30px;
     height: 30px;
     position: relative;
     display: none;
 }
+
+
 /* << banner*/
-#control{
+
+#control {
     width: 1200px;
     height: 100%;
 }
-#content{
+
+#content {
     width: 100%;
     height: 100%;
 }
-#footer{
+
+#footer {
     width: 100%;
     height: 180px;
     font-weight: bold;
@@ -261,10 +302,12 @@ body{
     background: rgb(18, 36, 44);
     line-height: 180px;
 }
-.timkiem{
+
+.timkiem {
     padding-left: 120px;
 }
-.box{
+
+.box {
     width: 220px;
     text-align: center;
     padding-bottom: 5px;
@@ -274,81 +317,94 @@ body{
     height: 300px;
     border: 1px solid #eee;
 }
-.box a{
+
+.box a {
     height: 240px;
     display: block;
     text-decoration: none;
     margin-left: -1px;
     padding-top: 5px;
 }
-.box a:hover{
+
+.box a:hover {
     text-decoration: none;
 }
-.shopping_cart{
+
+.shopping_cart {
     width: 40px;
     margin-left: 90px;
 }
-.shopping_cart a{
+
+.shopping_cart a {
     height: 40px;
     display: block;
     text-decoration: none;
     margin-left: -1px;
     padding-top: 5px;
 }
-.motionpictures{
+
+.motionpictures {
     width: 150px;
     height: 130px;
     margin-top: 20px;
 }
-.motionpictures_top{
+
+.motionpictures_top {
     width: 150px;
     height: 130px;
-    margin-top:15px;
+    margin-top: 15px;
     transition-duration: 0.2s;
     margin-bottom: 5px;
 }
-.motionpictures_bottom{
+
+.motionpictures_bottom {
     width: 150px;
     height: 130px;
-    margin-top:20px;
+    margin-top: 20px;
     transition-duration: 0.2s;
 }
-.pname{
+
+.pname {
     width: 100%;
     height: 35px;
     font-size: 15px;
     color: #333;
     margin-top: 20px;
     margin-bottom: 5px;
-    
 }
-.pprice{
+
+.pprice {
     padding-bottom: 20px;
     font: bold 15px arial;
     color: rgb(252, 25, 17);
 }
-.action{
-    font:bold 10px arial;
+
+.action {
+    font: bold 10px arial;
 }
-.action a{
+
+.action a {
     text-decoration: none;
     color: rgb(21, 129, 201);
 }
-.sp{
+
+.sp {
     width: 100%;
     padding-bottom: 15px;
     float: left;
 }
+
 .sp p {
-    width: 99%;
+    width: 99.9%;
     height: 50px;
     text-align: left;
     line-height: 50px;
-    background: rgb(255, 255, 255); 
+    background: rgb(255, 255, 255);
     border-top: 10px solid rgb(241, 241, 241);
     border-bottom: 1px solid #eee;
 }
-.sp p a{
+
+.sp p a {
     display: block;
     text-decoration: none;
     transition-duration: 1s;
@@ -357,50 +413,59 @@ body{
     font-size: 17px;
     color: rgb(65, 65, 65);
     font-weight: 600;
-    font:17px arial;
+    font: 17px arial;
 }
-.boxctsp{
+
+.boxctsp {
     width: 100%;
     text-align: center;
-    margin-top:19px;
+    margin-top: 19px;
     margin-left: 19px;
     color: #333;
 }
-.description{
+
+.description {
     float: left;
 }
-.find{
+
+.find {
     width: 100%;
 }
 
+
 /* form đăng ký */
-.boxregister{
+
+.boxregister {
     width: 100%;
     background: #eff0f5;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.boxreg{
+
+.boxreg {
     width: 750px;
     height: 400px;
     margin: auto;
     background: #FFF;
     padding: 20px;
 }
-.boxreg-l{
+
+.boxreg-l {
     width: 380px;
     float: left;
 }
 
-.boxreg-r{
+.boxreg-r {
     width: 300px;
-    float: left ;
+    float: left;
     margin-left: 30px;
 }
-.mod-input{
+
+.mod-input {
     width: 100%;
 }
-.mod-input-eror{
+
+.mod-input-eror {
     border: 1px solid #f44336;
     box-sizing: border-box;
     width: 100%;
@@ -411,7 +476,8 @@ body{
     margin-bottom: 2px;
     outline: none;
 }
-.mod-input p{
+
+.mod-input p {
     font-size: 12px;
     height: 15px;
     line-height: 15px;
@@ -419,15 +485,16 @@ body{
     color: rgb(39, 37, 37);
     display: block;
     margin-bottom: 5px;
-    
 }
-.mod-input input::placeholder{
+
+.mod-input input::placeholder {
     color: #b3b3b3;
 }
-.normal{
+
+.normal {
     box-sizing: border-box;
     width: 100%;
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
     font-size: 14px;
     height: 40px;
     line-height: 40px;
@@ -436,7 +503,8 @@ body{
     outline: none;
     color: rgb(59, 59, 59);
 }
-.clicktext{
+
+.clicktext {
     box-sizing: border-box;
     width: 100%;
     border: 1px solid rgb(165, 165, 165);
@@ -447,7 +515,8 @@ body{
     margin-bottom: 2px;
     outline: none;
 }
-.mod-input span{
+
+.mod-input span {
     min-height: 16px;
     line-height: 16px;
     font-size: 12px;
@@ -456,14 +525,17 @@ body{
     display: block;
     margin-bottom: 10px;
 }
-.boxreg-birthday{
+
+.boxreg-birthday {
     float: left;
 }
-.boxreg-sex{
+
+.boxreg-sex {
     float: left;
     width: 115px;
 }
-.boxreg-birthday p{
+
+.boxreg-birthday p {
     font-size: 12px;
     height: 15px;
     line-height: 15px;
@@ -472,27 +544,32 @@ body{
     display: block;
     margin-bottom: 5px;
 }
-.input-birthday{
+
+.input-birthday {
     width: 260px;
 }
-.input-birthday select option{
-    color:  rgb(31, 30, 30);
+
+.input-birthday select option {
+    color: rgb(31, 30, 30);
 }
-.input-birthday-day{
+
+.input-birthday-day {
     float: left;
     width: 65px;
     height: 40px;
     border: 1px solid #ddd;
     color: #9e9e9e;
 }
-.input-birthday-day-eror{
+
+.input-birthday-day-eror {
     float: left;
     width: 65px;
     height: 40px;
     border: 1px solid #f44336;
     color: #9e9e9e;
 }
-.input-birthday-month{
+
+.input-birthday-month {
     float: left;
     width: 65px;
     margin-left: -1px;
@@ -500,7 +577,8 @@ body{
     border: 1px solid #ddd;
     color: #9e9e9e;
 }
-.input-birthday-month-eror{
+
+.input-birthday-month-eror {
     float: left;
     width: 65px;
     margin-left: -1px;
@@ -508,7 +586,8 @@ body{
     border: 1px solid #f44336;
     color: #9e9e9e;
 }
-.input-birthday-year{
+
+.input-birthday-year {
     float: left;
     width: 80px;
     margin-left: -1px;
@@ -516,7 +595,8 @@ body{
     border: 1px solid #ddd;
     color: #9e9e9e;
 }
-.input-birthday-year-eror{
+
+.input-birthday-year-eror {
     float: left;
     width: 80px;
     margin-left: -1px;
@@ -524,33 +604,40 @@ body{
     border: 1px solid #f44336;
     color: #9e9e9e;
 }
+
 .mod-input p label {
     color: #fa1b0b;
 }
-.input-sex{
+
+.input-sex {
     width: 70px;
     height: 40px;
     border: 1px solid #ddd;
     color: #9e9e9e;
 }
-.input-sex-eror{
+
+.input-sex-eror {
     width: 70px;
     height: 40px;
     border: 1px solid #f44336;
     color: #9e9e9e;
 }
+
 .boxreg-sex select option {
     color: rgb(31, 30, 30);
 }
+
 .input-sex select option:hover {
     background: rgb(160, 5, 5);
 }
-.recaptcha{
+
+.recaptcha {
     font-size: 12px;
     color: #ff424f;
     margin-top: 5px;
 }
-.btnsubmit{
+
+.btnsubmit {
     box-sizing: border-box;
     width: 100%;
     background: rgb(37, 167, 167);
@@ -564,14 +651,18 @@ body{
     border: 1px solid rgb(37, 167, 167);
     border-radius: 2px;
 }
+
+
 /* form đăng nhập */
-.boxlogin{
+
+.boxlogin {
     width: 100%;
     background: #eff0f5;
     padding-top: 100px;
     padding-bottom: 100px;
 }
-.boxlog{
+
+.boxlog {
     width: 750px;
     height: 220px;
     margin: auto;
@@ -579,115 +670,135 @@ body{
     padding: 30px;
     padding-right: 0px;
 }
-.boxlog-l{
+
+.boxlog-l {
     width: 380px;
     float: left;
 }
 
-.boxlog-r{
+.boxlog-r {
     margin-top: 16px;
     width: 300px;
     float: left;
     margin-left: 30px;
 }
 
-/* Thông tin cá nhân */
-.box-info{
-    width: 100%;
-    height: 530px;   
-    border-top: 30px solid  rgb(241, 241, 241);
-    background: rgb(241, 241, 241);
 
+/* Thông tin cá nhân */
+
+.box-info {
+    border-top: 30px solid rgb(241, 241, 241);
+    width: 100%;
 }
-.info-left{
-    width: 200px;
-    height: 500px;
+
+.info-left {
     float: left;
-    background: rgb(241, 241, 241);
+    width: 100%;
     color: #424242;
     font-family: Roboto-Regular;
     font-size: 12px;
+    background: rgb(241, 241, 241);
+    min-height: 500px;
 }
-.info-right{
-    float: left;
+
+.info-right {
+    float: right;
     width: 998px;
-    height: 500px;
     border-radius: 2px;
-    border: 1px solid rgb(233, 233, 233);
+    border-bottom: 30px solid rgb(241, 241, 241);
     background: rgb(255, 255, 255);
+    margin-top: -155px;
 }
-.mod-container{
+
+.mod-container {
     list-style: none;
     margin: 16px 0 0;
     padding: 0;
-    font-family: Helvetica Neue,Helvetica,Arial;
+    font-family: Helvetica Neue, Helvetica, Arial;
     font-size: 14px;
     color: #424242;
     letter-spacing: 0;
     line-height: 24px;
 }
-.mod-container li{
+
+.mod-container li {
     list-style: none;
 }
-.mod-container li a{
+
+.mod-container li a {
     text-decoration: none;
     color: #333;
     font-size: 15px;
 }
-.mod-container li a:hover{
-    color: #1a9Cb7;
+
+.mod-container li a:hover {
+    color: rgb(219, 22, 22);
 }
-.header-info{
+
+.mod-container li a:active {
+    color: rgb(219, 22, 22);
+}
+
+.header-info {
     width: 950px;
     height: 60px;
     margin: 24px;
     border-bottom: 1px solid rgb(235, 234, 234);
 }
-.header-info p{
+
+.header-info p {
     color: #333;
-    font-family: Helvetica Neue,Helvetica,Arial;
+    font-family: Helvetica Neue, Helvetica, Arial;
     font-size: 18px;
 }
-.header-security{
+
+.header-security {
     color: #555;
-    font-family: Helvetica Neue,Helvetica,Arial;
+    font-family: Helvetica Neue, Helvetica, Arial;
     font-size: 14px;
     margin-top: 5px;
 }
-.profile{
+
+.profile {
     width: 100%;
     height: 440px;
     float: left;
 }
-.profile-left{
+
+.profile-left {
     width: 600px;
     height: 440px;
     float: left;
-}   
-.profile-right{
+}
+
+.profile-right {
     width: 348px;
     height: 200px;
     float: left;
     border-left: 1px solid rgb(235, 234, 234);
 }
-.input-profile{
+
+.input-profile {
     width: 100%;
     float: left;
 }
-.input-profile-label{
+
+.input-profile-label {
     width: 23.5%;
     text-align: right;
-    color: rgba(85,85,85,.8);
+    color: rgba(85, 85, 85, .8);
     text-transform: capitalize;
     float: left;
     line-height: 40px;
     font-size: 14px;
 }
-.input-profile-label label{
-    color: rgba(85,85,85,.8);
+
+.input-profile-label label {
+    color: rgba(85, 85, 85, .8);
     font-weight: normal;
 }
-.input-profile-content{
+
+.input-profile-content {
     box-sizing: border-box;
     padding-left: 1.25rem;
     width: 65%;
@@ -695,22 +806,36 @@ body{
     color: #333;
     line-height: 40px;
 }
-.btnsave{
+
+.btnsave {
     width: 70px;
     height: 40px;
     margin-left: 160px;
     border-radius: 2px;
-    border:1px solid rgb(37, 167, 167);
+    border: 1px solid rgb(37, 167, 167);
     background: rgb(37, 167, 167);
     color: #FFF;
     margin-top: 25px;
 }
-.member-info{
-    color: rgb(22, 122, 122);
+
+.member-info {
+    color: rgb(34, 136, 177);
 }
 
+.mod-container li ul {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.mod-container li ul li a:focus {
+    color: rgb(219, 22, 22);
+}
+
+
 /* Giỏ hàng */
-.cart-wrap{
+
+.cart-wrap {
     width: 68%;
     margin-top: 30px;
     color: #333;
@@ -718,67 +843,76 @@ body{
     float: left;
     min-height: 500px;
 }
-.cart-title{
+
+.cart-title {
     width: 100%;
     float: left;
     height: 50px;
 }
-.cart-title h2{
+
+.cart-title h2 {
     font-size: 18px;
     color: #212121;
     margin-left: 10px;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
     float: left;
     line-height: 1.3;
-    margin-top: 0px; 
+    margin-top: 0px;
 }
-.cart-title .product-total{
+
+.cart-title .product-total {
     float: left;
     font-size: 14px;
     color: #989898;
     padding-top: 2px;
     margin-left: 7px
 }
-.cart-wrap.cart-content{
+
+.cart-wrap.cart-content {
     margin: 0;
 }
-.cart-content{
+
+.cart-content {
     width: 85%;
     float: left;
 }
-.cart-info{
-    color: #333;    
+
+.cart-info {
+    color: #333;
     width: 32%;
     float: left;
     border: 10px solid rgb(241, 241, 241);
     border-right: 0;
     padding-bottom: 30px;
 }
-.cart-content-left{
+
+.cart-content-left {
     width: 100%;
     float: left;
-    height: 100px;  
+    height: 100px;
     margin-bottom: 20px;
     padding-top: 40px;
 }
-.shipping{
+
+.shipping {
     width: 25%;
     height: 40px;
     float: right;
     margin-top: 4px;
-
 }
-.cart-row-inner{
+
+.cart-row-inner {
     width: 100%;
     margin-left: 10px;
 }
-.option-col{
+
+.option-col {
     width: 30px;
     float: left;
     padding-top: 20px;
 }
 
-.option-col .checkmark{
+.option-col .checkmark {
     top: 4px;
     left: 0;
     height: 15px;
@@ -787,34 +921,42 @@ body{
     border: 1px solid #bcbcbc;
     border-radius: 2px;
 }
+
 .field-img-col {
     width: 57px;
     float: left;
     margin-right: 15px;
 }
-.field-img-col img{
+
+.field-img-col img {
     width: 57px;
     height: 50px;
 }
+
 .field-content-col {
     width: 230px;
     float: left;
     margin-right: 15px;
 }
-.field-content-col a{
+
+.field-content-col a {
     color: #989898;
     text-decoration: none;
 }
-.field-content-col a:hover{
+
+.field-content-col a:hover {
     color: #b11212;
 }
+
 .field-content-col .field-name {
     margin-bottom: 10px;
 }
+
 .field-content-col .field-others {
     color: #989898;
     font-size: 13px;
 }
+
 .field-price-col {
     width: 100px;
     float: left;
@@ -822,22 +964,25 @@ body{
     font-weight: 700;
     margin-right: 15px;
 }
-.field-price-col .price{
+
+.field-price-col .price {
     font-size: 15px;
     font-weight: 700;
-
 }
+
 .field-qty-col {
     width: 100px;
     float: left;
 }
-.field-qty-col .qty{
+
+.field-qty-col .qty {
     width: 70px;
     height: 24px;
     border: 1px solid #ddd;
     display: block;
     zoom: 1;
 }
+
 .qty button {
     width: 20px;
     height: 22px;
@@ -849,88 +994,101 @@ body{
     cursor: pointer;
     border: none;
     float: left;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
     font-size: 14px;
 }
-.qty input{
-        width: 28px;
-        text-align: center;
-        border: none;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        padding: 0;
-        font-family: 'Roboto Condensed',Arial,sans-serif;
-        font-size: 12px;
-        line-height: 100%;
-        float: left;
-        margin-top: 5px;
-        outline: 0;
-        box-shadow: none;    
+
+.qty input {
+    width: 28px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 0;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 100%;
+    float: left;
+    margin-top: 5px;
+    outline: 0;
+    box-shadow: none;
 }
+
 .field-status-col {
     font-size: 12px;
     color: #989898;
     padding-top: 5px;
     display: block;
 }
-.shipping-info{
+
+.shipping-info {
     margin-bottom: 25px;
     padding-left: 33px;
 }
-.shipping-info p{
+
+.shipping-info p {
     font-size: 12px;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
     font-weight: 700;
 }
-.shipping-info select{
+
+.shipping-info select {
     color: #333;
     outline: 0;
-    box-shadow: none;  
+    box-shadow: none;
     margin-top: 4px;
     font-size: 12px;
 }
-.cart-info ul{
+
+.cart-info ul {
     list-style: none;
-    margin-left: 13px;  
-    margin-bottom: 10px; 
+    margin-left: 13px;
 }
-.cart-info ul li{
+
+.cart-info ul li {
     width: 97%;
-    height: 45px;
-    line-height: 45px;
+    height: 35px;
+    line-height: 35px;
 }
-.cart-info h2{
+
+.cart-info h2 {
     font-size: 18px;
     color: #212121;
     margin-left: 10px;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
-    line-height: 1.3;   
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    line-height: 1.3;
     margin-top: 20px;
 }
-.oder-info-left{
-    width: 70%;
+
+.oder-info-left {
+    width: 50%;
     float: left;
 }
-.oder-info-left p{
+
+.oder-info-left p {
     font-size: 14px;
     color: #757575;
     letter-spacing: 0;
 }
-.oder-info-right p{
+
+.oder-info-right p {
     font-size: 16px;
     text-align: right;
     color: #202020;
 }
-.oder-info-right{
-    width: 29%;
+
+.oder-info-right {
+    width: 49%;
     float: right;
     text-align: right;
 }
-.oder-info-right .total-price{
+
+.oder-info-right .total-price {
     font-size: 18px;
     color: #f57224;
 }
-.btn-con-cart{
+
+.btn-con-cart {
     width: 100%;
     height: 40px;
     display: inline-block;
@@ -950,8 +1108,10 @@ body{
     line-height: 40px;
 }
 
+
 /* Thông tin giao hàng */
-.shipment-wrap{
+
+.shipment-wrap {
     width: 68%;
     margin-top: 5px;
     color: #333;
@@ -959,60 +1119,239 @@ body{
     float: left;
     min-height: 500px;
 }
-.shipment-title{
+
+.shipment-title {
     width: 100%;
     float: left;
     height: 50px;
 }
-.shipment-title h2{
+
+.shipment-title h2 {
     font-size: 18px;
     color: #212121;
     margin-left: 20px;
-    font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+    font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial, Sans-serif;
     float: left;
-    line-height: 1.3;   
+    line-height: 1.3;
+    margin-top: 20px;
 }
-.shipment-wrap.shipment-content{
+
+.shipment-wrap.shipment-content {
     margin: 0;
 }
-.shipment-content{
+
+.shipment-content {
     margin-top: 15px;
     width: 97%;
     float: left;
-    margin-left: 20px;  
+    margin-left: 20px;
 }
-.shipment-info{
-    color: #333;    
+
+.shipment-info {
+    color: #333;
     width: 32%;
     float: left;
     border: 10px solid rgb(241, 241, 241);
     border-right: 0;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
-.shipment-info ul{
+
+.shipment-info ul {
     list-style: none;
-    margin-left: 13px;  
-    margin-bottom: 10px; 
+    margin-left: 13px;
 }
-.shipment-info ul li{
+
+.shipment-info ul li {
     width: 97%;
-    height: 45px;
-    line-height: 45px;
+    height: 35px;
+    line-height: 35px;
 }
-.shipment-info h2{
+
+.shipment-info h2 {
     font-size: 18px;
     color: #212121;
     margin-left: 10px;
-    font-family: 'Roboto Condensed',Arial,sans-serif;
-    line-height: 1.3;   
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    line-height: 1.3;
     margin-top: 20px;
 }
-.shipment-content-left{
+
+.shipment-content-left {
     width: 40%;
     float: left;
 }
-.shipment-content-right{
+
+.shipment-content-right {
     width: 50%;
     float: left;
     margin-left: 40px;
+}
+
+.total {
+    width: 110px;
+    border: 0px;
+    outline: 0;
+    box-shadow: none;
+    display: none;
+}
+
+
+/* Đơn hàng của tôi */
+
+.order-info {
+    width: 100%;
+    border-bottom: 5px solid rgb(241, 241, 241);
+    border-top: 5px solid rgb(241, 241, 241);
+}
+
+.head-order-info {
+    width: 100%;
+    padding-left: 23px;
+    float: left;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    padding-right: 20px;
+}
+
+.head-order-info-left {
+    float: left;
+    margin-top: 10px;
+}
+
+.head-order-info-left p {
+    float: left;
+    margin-bottom: -0.5px;
+    color: #212121;
+    font-size: 14px;
+}
+
+.oder-date {
+    margin-top: 5px;
+    color: #757575;
+    font-size: 12px;
+}
+
+.head-order-info-right {
+    float: right;
+    margin-top: 10px;
+}
+
+.order-item {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.item-pic {
+    float: left;
+}
+
+.item-content {
+    float: left;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #212121;
+    font-size: 14px;
+}
+
+.item-quantity {
+    float: left;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #ee4b4b;
+    font-size: 14px;
+}
+
+.item-info {
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #4caf50;
+    font-size: 14px;
+}
+
+.head-order-info-right a {
+    color: #1a9Cb7;
+    text-decoration: none;
+}
+
+
+/* Chi tiết đơn hàng */
+
+.oder-item-header {
+    font-size: 16px;
+    background: rgb(250, 250, 250);
+    margin-left: -40px;
+}
+
+.oder-item-header tr {
+    width: 100%;
+    height: 50px;
+}
+
+.oder-col1 {
+    width: 180px;
+    color: #757575;
+    padding-left: 20px;
+}
+
+.oder-col2 {
+    width: 180px;
+    color: #757575;
+    padding-left: 20px;
+}
+
+.oder-col3 {
+    width: 420px;
+    color: #757575;
+    padding-left: 20px;
+}
+
+.oder-col4 {
+    width: 220px;
+    color: #757575;
+    padding-left: 40px2
+}
+
+.oder-content-col1 {
+    width: 180px;
+    padding-left: 20px;
+}
+
+.oder-content-col2 {
+    width: 180px;
+    padding-left: 20px;
+}
+
+.oder-content-col3 {
+    width: 420px;
+    padding-left: 20px;
+}
+
+.oder-content-col4 {
+    width: 220px;
+    padding-left: 20px;
+}
+
+.oder-content-col5 {
+    width: 110px;
+    padding-left: 20px;
+}
+
+.oder-item-content {
+    font-size: 16px;
+    background: #fff;
+    margin-left: -40px;
+    color: #212121;
+}
+
+.oder-item-content tr {
+    height: 80px;
+    border-top: 1px solid rgb(236, 236, 236);
+}
+
+.oder-near {
+    font-size: 16px;
 }

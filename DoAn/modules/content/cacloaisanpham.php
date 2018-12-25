@@ -4,6 +4,7 @@
     $i=0;
     if(isset($_GET['them'])){
         $idsp=$_GET['them'];
+        $gia=$_GET['gia'];
         if(isset($_SESSION['giohang']) && is_array($_SESSION['giohang'])){
             $count=count($_SESSION['giohang']);
             $check=false;
@@ -19,6 +20,7 @@
             if($check==false){
                 $_SESSION['giohang'][$count]["idsp"]=$idsp;
                 $_SESSION['giohang'][$count]["soluong"]=1;
+                $_SESSION['giohang'][$count]["gia"]=$gia;
             }
         }
         else{
@@ -26,6 +28,7 @@
             $_SESSION['giohang']=array();
             $_SESSION['giohang'][0]["idsp"]=$idsp;
             $_SESSION['giohang'][0]["soluong"]=1;
+            $_SESSION['giohang'][0]["gia"]=$gia;
         }
         header('location:index.php?xem=cacloaisanpham&id='.$_GET['id'].'&tenloaisp='.$_GET['tenloaisp']);
     }
@@ -43,7 +46,7 @@
                 <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
             </a>
             <div class="shopping_cart">
-                <a href="index.php?xem=cacloaisanpham&them=<?php echo $dong['idsp']?>&id=<?php echo $_GET['id']?>&tenloaisp=<?php echo $_GET['tenloaisp'];?>">
+                <a href="index.php?xem=cacloaisanpham&them=<?php echo $dong['idsp']?>&id=<?php echo $_GET['id']?>&tenloaisp=<?php echo $_GET['tenloaisp'];?>&gia=<?php echo $dong['gia']?>">
                     <img src="images/shopping_cart.jpg" width="40" height="40">
                 </a>
             </div>
