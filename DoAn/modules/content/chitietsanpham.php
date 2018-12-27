@@ -13,7 +13,8 @@
 <div class="sp">
     <p><a href="#">Chi tiết sản phẩm</a></p>
     <div class="boxctsp">
-        <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>">
+        <img src="admin/modules/quanlysp/uploads/<?php echo $dong['hinhanh']?>" width="400" height="400" class="
+detail">
         <div class="pname"><?php echo $dong['tensp']?></div>
         <div class="pprice">Giá bán: <?php echo $dong['gia']?></div>
         <div class="view">Lượt xem: <?php echo $dong['soluotxem']?></div>
@@ -36,7 +37,7 @@
         <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungloai['idsp']?>">
             <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungloai['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
             <div class="pname" id="<?php echo $i;?>"><?php echo $dong_cungloai['tensp']?></div>
-            <div class="pprice"><?php echo $dong_cungloai['gia']?>đ</div>
+            <div class="pprice"><?php echo number_format($dong_cungloai['gia'], 0, ',', '.').'₫' ?></div>
             <div class="action">
             </div>
         </a>
@@ -62,7 +63,7 @@
         <a href="index.php?xem=chitietsanpham&id=<?php echo $dong_cungnsx['idsp']?>">
             <img src="admin/modules/quanlysp/uploads/<?php echo $dong_cungnsx['hinhanh']?>" class="motionpictures" onmouseover="motionpictures(this,1,<?php echo $i;?>)" onmouseout="motionpictures(this,2,<?php echo $i;?>)">
             <div class="pname" id="<?php echo $i;?>"><?php echo $dong_cungnsx['tensp']?></div>
-            <div class="pprice"><?php echo $dong_cungnsx['gia']?>đ</div>
+            <div class="pprice"><?php echo number_format($dong_cungnsx['gia'], 0, ',', '.').'₫' ?></div>
             <div class="action">
             </div>
         </a>

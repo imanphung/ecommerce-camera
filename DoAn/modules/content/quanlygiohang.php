@@ -22,7 +22,12 @@ $count=count($_SESSION['giohang']);
                 $_SESSION['giohang'][$i]=$_SESSION['giohang'][$i+1];
             }
         }
+        if($count-1==0){
+            unset($_SESSION['giohang']);
+        }
+        else{
         unset($_SESSION['giohang'][$count-1]);
+        }
         header('location:index.php?xem=quanlygiohang');
     }?>
     <?php
@@ -172,6 +177,20 @@ $count=count($_SESSION['giohang']);
     </div>
 </form>
 <?php
+}else{
+?>
+<div class="cart-none">
+    <img src="images/giohangtrong.jpg">
+    <div class="buynow-wrap">
+    <button type="button" class="buynow" onclick="Shopping();">MUA NGAY</button>
+    </div>
+</div>
+<?php
 }
 ?>
+<script>
+function Shopping() {
+    window.location = "index.php";
+}</script>
+
 

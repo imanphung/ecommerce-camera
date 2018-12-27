@@ -1,7 +1,57 @@
 <?php
-    $sql="SELECT * FROM nhasanxuat,chitetsp WHERE nhasanxuat.idnsx=chitetsp.idnsx and nhasanxuat.idnsx=$_GET[id] ORDER BY nhasanxuat.idnsx";
+if(isset($_GET['page'])){
+    $getpage=$_GET['page'];
+}
+else{
+    $getpage = '';
+}
+if($getpage ==''||$getpage==1){
+    $setpage=0;
+}
+else{
+    $setpage=($getpage*10)-10;
+}
+    $sql="SELECT * FROM nhasanxuat,chitetsp WHERE nhasanxuat.idnsx=chitetsp.idnsx and nhasanxuat.idnsx=$_GET[id] ORDER BY nhasanxuat.idnsx LIMIT $setpage,10";
     $run=mysqli_query($conn,$sql);
     $i=0;
+    if(isset($_GET['them'])){
+        $idsp=$_GET['them'];
+        $gia=$_GET['gia'];
+        $sql="SELECT * FROM chitetsp WHERE idsp=$idsp";
+        $run1=mysqli_query($conn,$sql);
+        if($run1){
+            $dong1=mysqli_fetch_array($run1);
+        }
+        if(isset($_SESSION['giohang']) && is_array($_SESSION['giohang'])){
+            $count=count($_SESSION['giohang']);
+            $check=false;
+            //Tìm sản phẩm trong giỏ hàng sau đó tăng số lượng lên 1
+            for($i=0;$i<$count;$i++){
+                if($_SESSION['giohang'][$i]["idsp"]==$idsp){
+                    if($_SESSION['giohang'][$i]["soluong"]<$dong1['soluongban']){
+                    $_SESSION['giohang'][$i]["soluong"]+=1;
+                    }
+                
+                $check=true;
+                break;
+                }
+            }
+            //Nếu chưa có trong giỏ hàng thì chèn vào cuối của giỏ hàng
+            if($check==false){
+                $_SESSION['giohang'][$count]["idsp"]=$idsp;
+                $_SESSION['giohang'][$count]["soluong"]=1;
+                $_SESSION['giohang'][$count]["gia"]=$gia;
+            }
+        }
+        else{
+            //Tạo mới 1 giỏ hàng
+            $_SESSION['giohang']=array();
+            $_SESSION['giohang'][0]["idsp"]=$idsp;
+            $_SESSION['giohang'][0]["soluong"]=1;
+            $_SESSION['giohang'][0]["gia"]=$gia;
+        }
+        header('location:index.php?xem=cacnhasanxuat&id='.$_GET['id'].'&tennsx='.$_GET['tennsx']);
+    }
 ?>
 <div class="sp">
     <p><a href="#"><?php echo $_GET['tennsx']?></a></p>
@@ -16,7 +66,7 @@
                 <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
             </a>
             <div class="shopping_cart">
-                <a href="index.php?xem=quanlygiohang&id=<?php echo $dong['idsp']?>">
+                <a href="index.php?xem=cacnhasanxuat&them=<?php echo $dong['idsp']?>&id=<?php echo $_GET['id']?>&tennsx=<?php echo $_GET['tennsx'];?>&gia=<?php echo $dong['gia']?>">
                     <img src="images/shopping_cart.jpg" width="40" height="40">
                 </a>
             </div>
@@ -25,3 +75,16 @@
     $i++;
     }?>
 </div>     
+<div class="page">
+        Trang: 
+        <?php
+            $sql="SELECT * FROM nhasanxuat,chitetsp WHERE nhasanxuat.idnsx=chitetsp.idnsx and nhasanxuat.idnsx=$_GET[id] ORDER BY nhasanxuat.idnsx ";
+            $run=mysqli_query($conn,$sql);
+            $count=mysqli_num_rows($run);
+            $page=ceil($count/10);
+
+        for($a=1;$a<=$page;$a++){
+            echo '<a href="index.php?xem=cacnhasanxuat&id='.$_GET['id'].'&tennsx='.$_GET['tennsx'].'&page='.$a.'">'.' '.$a.' '.'</a>';
+        }
+        ?>
+</div>
