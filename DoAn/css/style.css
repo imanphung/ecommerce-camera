@@ -15,8 +15,8 @@ body {
     width: 100%;
     height: auto;
     float: left;
-    border-left: 75px solid rgb(241, 241, 241);
-    border-right: 75px solid rgb(241, 241, 241);
+    border-left: 75px solid #f5f5f5;
+    border-right: 75px solid #f5f5f5;
 }
 
 #header {
@@ -64,7 +64,7 @@ body {
     height: auto;
     display: none;
     position: absolute;
-    border: 1px solid rgb(243, 184, 57);
+    border: 1px solid rgb(145, 145, 145);
     border-top: 0px;
     border-radius: 2px;
     background: rgb(253, 253, 253);
@@ -136,8 +136,8 @@ body {
 }
 
 #menu-top ul li a img {
-    width: 30px;
-    height: 33px;
+    width: 33px;
+    height: 38px;
     padding-left: 5px;
     margin-top: 7px;
     display: block;
@@ -235,7 +235,7 @@ body {
 .banner-wrap {
     width: 100%;
     height: auto;
-    border-top: 20px solid rgb(241, 241, 241);
+    border-top: 20px solid #f5f5f5;
 }
 
 .slide {
@@ -277,6 +277,36 @@ body {
     height: 30px;
     position: relative;
     display: none;
+}
+
+.banner-sony {
+    width: 14.3%;
+    float: left;
+    padding-left: 30px;
+    border: 1px solid rgb(216, 216, 216);
+    margin-left: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.banner-canon {
+    width: 14.3%;
+    float: left;
+    padding-left: 35px;
+    border: 1px solid rgb(218, 218, 218);
+    margin-left: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.banner-fujifilm {
+    width: 14.3%;
+    float: left;
+    padding-left: 35px;
+    border: 1px solid rgb(218, 218, 218);
+    margin-left: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
 }
 
 
@@ -343,6 +373,43 @@ body {
     padding-top: 5px;
 }
 
+.new-product {
+    margin-top: 15px;
+}
+
+.new-p {
+    width: 30%;
+    height: 20px;
+    border: 1px solid #fdbe0f;
+    font-size: 11px;
+    line-height: 19px;
+    color: #fff;
+    background: #fdbe0f;
+    border-radius: 2px;
+}
+
+.hot-p {
+    width: 30%;
+    height: 20px;
+    border: 1px solid #5ead04;
+    font-size: 11px;
+    line-height: 19px;
+    color: #fff;
+    background: #5ead04;
+    border-radius: 2px;
+}
+
+.view-p {
+    width: 30%;
+    height: 20px;
+    border: 1px solid #3fa6b8;
+    font-size: 11px;
+    line-height: 19px;
+    color: #fff;
+    background: #3fa6b8;
+    border-radius: 2px;
+}
+
 .motionpictures {
     width: 150px;
     height: 130px;
@@ -400,7 +467,7 @@ body {
     text-align: left;
     line-height: 50px;
     background: rgb(255, 255, 255);
-    border-top: 10px solid rgb(241, 241, 241);
+    border-top: 10px solid #f5f5f5;
     border-bottom: 1px solid #eee;
 }
 
@@ -432,12 +499,18 @@ body {
     width: 100%;
 }
 
+.page {
+    color: rgb(102, 101, 101);
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 
 /* form đăng ký */
 
 .boxregister {
     width: 100%;
-    background: #eff0f5;
+    background: #f5f5f5;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -655,9 +728,19 @@ body {
 
 /* form đăng nhập */
 
+.have-account {
+    width: 300px;
+    height: 26px;
+    color: #757575;
+    font-size: 12px;
+    float: right;
+    margin-top: -50px;
+    margin-right: 100px;
+}
+
 .boxlogin {
     width: 100%;
-    background: #eff0f5;
+    background: #f5f5f5;
     padding-top: 100px;
     padding-bottom: 100px;
 }
@@ -687,7 +770,7 @@ body {
 /* Thông tin cá nhân */
 
 .box-info {
-    border-top: 30px solid rgb(241, 241, 241);
+    border-top: 30px solid #f5f5f5;
     width: 100%;
 }
 
@@ -697,7 +780,7 @@ body {
     color: #424242;
     font-family: Roboto-Regular;
     font-size: 12px;
-    background: rgb(241, 241, 241);
+    background: #f5f5f5;
     min-height: 500px;
 }
 
@@ -705,7 +788,7 @@ body {
     float: right;
     width: 998px;
     border-radius: 2px;
-    border-bottom: 30px solid rgb(241, 241, 241);
+    border-bottom: 30px solid #f5f5f5;
     background: rgb(255, 255, 255);
     margin-top: -155px;
 }
@@ -828,6 +911,11 @@ body {
     margin-bottom: 5px;
 }
 
+.mod-container li ul li a {
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
 .mod-container li ul li a:focus {
     color: rgb(219, 22, 22);
 }
@@ -881,7 +969,7 @@ body {
     color: #333;
     width: 32%;
     float: left;
-    border: 10px solid rgb(241, 241, 241);
+    border: 10px solid #f5f5f5;
     border-right: 0;
     padding-bottom: 30px;
 }
@@ -1108,6 +1196,31 @@ body {
     line-height: 40px;
 }
 
+.cart-none {
+    width: 100%;
+    min-height: 500px;
+    background: #f5f5f5;
+    padding-top: 70px;
+    padding-left: 400px;
+}
+
+.buynow {
+    width: 180px;
+    background: #ff5722;
+    color: #FFF;
+    border-radius: 2px;
+    height: 40px;
+    border: 1px solid #ff5722;
+    outline: 0;
+    box-shadow: none;
+}
+
+.buynow-wrap {
+    width: 200px;
+    margin-top: 17px;
+    margin-left: 100px;
+}
+
 
 /* Thông tin giao hàng */
 
@@ -1312,7 +1425,7 @@ body {
 .oder-col4 {
     width: 220px;
     color: #757575;
-    padding-left: 40px2
+    padding-left: 25px;
 }
 
 .oder-content-col1 {
@@ -1326,13 +1439,12 @@ body {
 }
 
 .oder-content-col3 {
-    width: 420px;
+    width: 440px;
     padding-left: 20px;
 }
 
 .oder-content-col4 {
-    width: 220px;
-    padding-left: 20px;
+    width: 180px;
 }
 
 .oder-content-col5 {
@@ -1355,3 +1467,6 @@ body {
 .oder-near {
     font-size: 16px;
 }
+
+
+/* Địa chỉ */

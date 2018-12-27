@@ -4,6 +4,8 @@ if(isset($_SESSION['user'])){
 }
 ?>
 <div class="boxlogin">
+<div class="have-account">Thành viên mới? <a href="?xem=dangky">Đăng ký</a> tại đây
+</div>
 <div class="boxlog">
 <form action="modules/content/xulydangnhap.php" method="POST" name="login" autocomplete="off" onsubmit="return validate_login(this)" enctype="multipart/form-data">
     <div class="boxlog-l">

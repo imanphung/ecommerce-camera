@@ -4,6 +4,8 @@ if(isset($_SESSION['user'])){
 }
 ?>
 <div class="boxregister">
+<div class="have-account">Bạn đã có tài khoản? <a href="?xem=dangnhap">Đăng nhập</a> tại đây
+</div>
 <div class="boxreg">
 <form action="modules/content/kiemtradangky.php" method="POST" name="register" autocomplete="off" onsubmit="return validate_register(this)" enctype="multipart/form-data">
     <div class="boxreg-l">

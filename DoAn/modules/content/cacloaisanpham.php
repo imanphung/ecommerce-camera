@@ -1,19 +1,39 @@
 <?php
-    $sql="SELECT * FROM loaisp,chitetsp WHERE loaisp.idSP=chitetsp.idloaisp and loaisp.idSP=$_GET[id] ORDER BY loaisp.idSP";
+if(isset($_GET['page'])){
+    $getpage=$_GET['page'];
+}
+else{
+    $getpage = '';
+}
+if($getpage ==''||$getpage==1){
+    $setpage=0;
+}
+else{
+    $setpage=($getpage*10)-10;
+}
+    $sql="SELECT * FROM loaisp,chitetsp WHERE loaisp.idSP=chitetsp.idloaisp and loaisp.idSP=$_GET[id] ORDER BY loaisp.idSP LIMIT $setpage,10";
     $run=mysqli_query($conn,$sql);
     $i=0;
     if(isset($_GET['them'])){
         $idsp=$_GET['them'];
         $gia=$_GET['gia'];
+        $sql="SELECT * FROM chitetsp WHERE idsp=$idsp";
+        $run1=mysqli_query($conn,$sql);
+        if($run1){
+            $dong1=mysqli_fetch_array($run1);
+        }
         if(isset($_SESSION['giohang']) && is_array($_SESSION['giohang'])){
             $count=count($_SESSION['giohang']);
             $check=false;
             //Tìm sản phẩm trong giỏ hàng sau đó tăng số lượng lên 1
             for($i=0;$i<$count;$i++){
                 if($_SESSION['giohang'][$i]["idsp"]==$idsp){
-                    $_SESSION['giohang'][$i]["soluong"] +=1;
-                    $check=true;
-                    break;
+                    if($_SESSION['giohang'][$i]["soluong"]<$dong1['soluongban']){
+                    $_SESSION['giohang'][$i]["soluong"]+=1;
+                    }
+                
+                $check=true;
+                break;
                 }
             }
             //Nếu chưa có trong giỏ hàng thì chèn vào cuối của giỏ hàng
@@ -54,4 +74,17 @@
     <?php
     $i++;
     }?>
-</div>                      
+</div> 
+<div class="page">
+        Trang: 
+        <?php
+            $sql="SELECT * FROM loaisp,chitetsp WHERE loaisp.idSP=chitetsp.idloaisp and loaisp.idSP=$_GET[id] ORDER BY loaisp.idSP";
+            $run=mysqli_query($conn,$sql);
+            $count=mysqli_num_rows($run);
+            $page=ceil($count/10);
+
+        for($a=1;$a<=$page;$a++){
+            echo '<a href="index.php?xem=cacloaisanpham&id='.$_GET['id'].'&tenloaisp='.$_GET['tenloaisp'].'&page='.$a.'">'.' '.$a.' '.'</a>';
+        }
+        ?>
+</div>                     

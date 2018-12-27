@@ -14,6 +14,9 @@ $i=0;
             <div class="pname" id="<?php echo $i;?>"><?php echo $dong['tensp']?></div>
             <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
         </a>
+        <div class="new-product">
+            <label class="new-p">Mới ra mắt</label>
+        </div>
     </div>
     <?php
     $i++;
@@ -35,6 +38,9 @@ $run=mysqli_query($conn,$sql);
             <div class="pname" id="<?php echo $i;?>"><?php echo $dong['tensp']?></div>
             <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
         </a>
+        <div class="new-product">
+            <label class="hot-p">Bán chạy</label>
+        </div>
     </div>
     <?php
     $i++;
@@ -56,6 +62,9 @@ $run=mysqli_query($conn,$sql);
             <div class="pname" id="<?php echo $i;?>"><?php echo $dong['tensp']?></div>
             <div class="pprice"><?php echo number_format($dong['gia'], 0, ',', '.').'₫' ?></div>   
         </a> 
+        <div class="new-product">
+            <label class="view-p">Xem nhiều</label>
+        </div>
     </div>
     <?php
     $i++;

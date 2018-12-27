@@ -1,79 +1,92 @@
 /* CSS Document*/
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-body{
-    font-family: tahoma,Arial, Helvetica, sans-serif;
-    font-size: 15px; 
-    background: rgb(248, 248, 248);
 
+body {
+    font-family: tahoma, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background: rgb(248, 248, 248);
 }
-#wrapper{
-    width: 1200px;
+
+#wrapper {
+    width: 100%;
     height: auto;
-    border:1px solid rgb(231, 101, 14);
     margin: auto;
     background: #FFF;
 }
 
-#header{
+#header {
     width: 100%;
     height: 350px;
 }
-#header img{
+
+#header img {
     width: 100%;
     height: 300px;
 }
-#header h1{
+
+#header h1 {
     text-align: center;
     color: rgb(29, 28, 28);
 }
-#menu{
+
+#menu {
     margin-bottom: 10px;
     width: 100%;
     height: 40px;
     background: rgb(29, 28, 28);
 }
-#menu ul{
+
+#menu ul {
     list-style: none;
     width: 100%;
     height: 40px;
 }
-#menu ul li{
+
+#menu ul li {
     height: 40px;
     line-height: 40px;
     float: left;
 }
-#menu ul li a{
+
+#menu ul li a {
     display: block;
     text-decoration: none;
     color: #FFF;
     padding-left: 30px;
     padding-right: 30px;
 }
-#menu ul li a:hover{
-    background: rgb(7, 173, 173);   
+
+#menu ul li a:hover {
+    background: rgb(7, 173, 173);
 }
-#content{
+
+#content {
     width: 100%;
     min-height: 600px;
 }
-.left{
+
+.left {
     width: 400px;
     height: auto;
     float: left;
 }
-.right{
+
+.right {
     width: 790px;
     height: auto;
     float: left;
 }
-.center{
+
+.center {
     width: 100%;
     height: auto;
 }
-.center p{
+
+.center p {
     width: 100%;
     height: 30px;
     margin-top: 30px;
@@ -82,4 +95,186 @@ body{
     line-height: 30px;
     font-size: 18px;
     color: #FFF;
+}
+
+.col-1 {
+    width: 60px;
+    height: 30px;
+}
+
+.col-2 {
+    width: 100px;
+    height: 30px;
+}
+
+.col-3 {
+    width: 100px;
+    height: 30px;
+}
+
+.col-4 {
+    width: 70px;
+    height: 30px;
+}
+
+.col-5 {
+    width: 200px;
+    height: 30px;
+}
+
+.col-6 {
+    width: 80px;
+    height: 30px;
+}
+
+.col-7 {
+    width: 50px;
+    height: 30px;
+}
+
+.product {
+    width: 100%;
+    text-align: center;
+}
+
+.product tr {
+    width: 100%;
+    height: 80px;
+    background: rgb(248, 248, 248);
+}
+
+.product-info {
+    width: 100%;
+    text-align: center;
+}
+
+.product-info tr {
+    width: 100%;
+    height: 80px;
+}
+
+.info-col-1 {
+    width: 60px;
+    height: 30px;
+}
+
+.info-col-2 {
+    width: 110px;
+    height: 30px;
+}
+
+.info-col-3 {
+    width: 105px;
+    height: 30px;
+}
+
+.info-col-4 {
+    width: 75px;
+    height: 30px;
+}
+
+.info-col-5 {
+    width: 200px;
+    height: 30px;
+}
+
+.info-col-6 {
+    width: 50px;
+    height: 30px;
+}
+
+.info-col-7 {
+    width: 50px;
+    height: 30px;
+}
+
+.info-col-7 a {
+    text-decoration: none;
+    color: rgb(12, 157, 214);
+}
+
+.info-col-7 a:hover {
+    color: rgb(14, 98, 131);
+}
+
+.col1 {
+    width: 60px;
+}
+
+.col2 {
+    width: 150px;
+}
+
+.col2 img {
+    margin-top: -30px;
+}
+
+.col3 {
+    width: 60px;
+}
+
+.col4 {
+    width: 60px;
+}
+
+.col5 {
+    width: 100px;
+}
+
+.col5 button {
+    width: 100px;
+    height: 40px;
+}
+
+.red {
+    width: 100px;
+    height: 40px;
+    background: rgb(221, 13, 13);
+    color: #FFF;
+    border: 1px solid rgb(221, 13, 13);
+    border-radius: 2px;
+}
+
+.green {
+    width: 100px;
+    height: 40px;
+    background: rgb(15, 109, 185);
+    color: #FFF;
+    border: 1px solid rgb(15, 109, 185);
+    border-radius: 2px;
+}
+
+.yellow {
+    width: 100px;
+    height: 40px;
+    background: rgb(226, 157, 7);
+    color: #FFF;
+    border: 1px solid rgb(226, 157, 7);
+    border-radius: 2px;
+}
+
+.products {
+    border: 1px solid rgb(196, 196, 196);
+    text-align: center;
+}
+
+.products tr {
+    height: 50px;
+}
+
+.products tr td a {
+    text-decoration: none;
+    color: rgb(18, 127, 170);
+}
+
+.products tr td a :hover {
+    color: rgb(4, 51, 70);
+}
+
+.add-product {
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.add-product tr {
+    height: 50px;
 }

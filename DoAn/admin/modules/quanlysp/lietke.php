@@ -3,7 +3,7 @@
     $run = mysqli_query($conn,$sql);
 ?>
 <p>Các loại mặt hàng</p>
-<table width="1200" border="1">
+<table width="100%" class="products">
     <tr>
         <td>ID</td>
         <td>Tên sản phẩm</td>

@@ -15,5 +15,14 @@
         if($tam=='quanlynsx'){
             include('modules/quanlynhasx/main.php');
         }
+        if($tam=='quanlydonhang'){
+            include('modules/quanlydonhang/main.php');
+        }
+        if($tam=='duyetdonhang'){
+            include('modules/quanlydonhang/duyetdonhang.php');
+        }
+        if($tam=='xulydonhang'){
+            include('modules/quanlydonhang/xulydonhang.php');
+        }
     ?>
 </div>

@@ -10,4 +10,16 @@
 			<img src="images/5.jpg" >  
 		</div>
 	</div>
+	<div class="banner-sony">
+		<img src="images/sony.jpg" width="100" height="100">
+	</div>
+	<div class="banner-canon">
+		<img src="images/logo-canon" width="100" height="100">
+	</div>
+	<div class="banner-fujifilm">
+		<img src="images/fuji.jpg" width="100" height="100">
+	</div>
+	<div class="banner-pic">
+		<img src="images/testbanner.jpg" width="590" height="100">
+	</div>
 </div>

@@ -21,7 +21,7 @@ else{
                 <a href="index.php?xem=quanlytaikhoan&chon=thongtincanhan">Thông tin cá nhân</a>
                 <ul>
                     <li><a href="index.php?xem=quanlytaikhoan&chon=thongtincanhan">Hồ sơ</a></li>
-                    <li><a href="#">Địa chỉ</a></li>
+                    <li><a href="index.php?xem=quanlytaikhoan&chon=diachi">Địa chỉ</a></li>
                     <li><a href="#">Đổi mật khẩu</a></li>
                     
                 </ul>
@@ -37,11 +37,11 @@ else{
             else{
                 $tam='';
             }
-            if($tam=='diachi'){
-                include('modules/content/thongtincanhan/diachi.php');
-            }
             if($tam=='thongtindonhang'){
                 include('modules/content/thongtindonhang/thongtindonhang.php');
+            }
+            if($tam=='diachi'){
+                include('modules/content/thongtincanhan/diachi.php');
             }
             if($tam=='chitietdonhang'){
                 include('modules/content/thongtindonhang/chitietdonhang.php');

@@ -18,11 +18,23 @@ $json=json_decode($list,true);
 if($json['success'] !=1){
     throw new Exception('Vui lòng kích hoạt captcha');
 }
-$sql="insert into khachhang (tenkh,ngaysinh,email,sdt,gioitinh,matkhau) values('$name','$date','$email','$phonenumber','$sex','$pass')";
-mysqli_query($conn,$sql);
-$_SESSION['user'] = $phonenumber;
-$_SESSION['pass'] = $pass;
-header('location:../../index.php?xem=quanlytaikhoan');
+$sql = "SELECT * FROM khachhang WHERE email = '$phone_email' or sdt = '$phone_email'";  
+$run = mysqli_query($conn,$sql);
+if($run){
+    $row=mysqli_fetch_array($run);
+    if($row== 0){
+        setcookie('eror','Tài khoản đã tồn tại', time()+ 1, '/');
+        header("location:../../index.php?xem=dangky");
+    }
+    else{
+        $sql="insert into khachhang (tenkh,ngaysinh,email,sdt,gioitinh,matkhau) values('$name','$date','$email','$phonenumber','$sex','$pass')";
+        mysqli_query($conn,$sql);
+        $_SESSION['user'] = $phonenumber;
+        $_SESSION['pass'] = $pass;
+        header('location:../../index.php?xem=quanlytaikhoan');
+    }
+}
+
 }
 catch(Exception $e){
     setcookie('eror',$e->getMessage(), time()+ 1, '/');
